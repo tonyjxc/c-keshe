@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+// 尝试visual studio更改
 namespace WindowsFormsApp1
 {
     public class MyGlobal
@@ -13,7 +14,7 @@ namespace WindowsFormsApp1
     }
     static class Program
     {
-    
+        
         /// <summary>
         /// 应用程序的主入口点。
         /// </summary>
