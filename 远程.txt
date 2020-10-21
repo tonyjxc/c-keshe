@@ -1,0 +1,1 @@
+D:\gongjv\frp_0.32.1_windows_amd64\frpc.exe -c D:\gongjv\frp_0.32.1_windows_amd64\frpc.ini 
