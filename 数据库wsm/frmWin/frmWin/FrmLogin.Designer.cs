@@ -42,26 +42,29 @@
             // txtName
             // 
             this.txtName.AutoSize = true;
-            this.txtName.Location = new System.Drawing.Point(34, 42);
+            this.txtName.Location = new System.Drawing.Point(26, 34);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(67, 15);
+            this.txtName.Size = new System.Drawing.Size(53, 12);
             this.txtName.TabIndex = 0;
             this.txtName.Text = "用户名：";
             // 
             // txtPwd
             // 
             this.txtPwd.AutoSize = true;
-            this.txtPwd.Location = new System.Drawing.Point(34, 90);
+            this.txtPwd.Location = new System.Drawing.Point(26, 72);
+            this.txtPwd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtPwd.Name = "txtPwd";
-            this.txtPwd.Size = new System.Drawing.Size(52, 15);
+            this.txtPwd.Size = new System.Drawing.Size(41, 12);
             this.txtPwd.TabIndex = 1;
             this.txtPwd.Text = "密码：";
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(37, 196);
+            this.btnOK.Location = new System.Drawing.Point(28, 157);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(2);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(77, 38);
+            this.btnOK.Size = new System.Drawing.Size(58, 30);
             this.btnOK.TabIndex = 2;
             this.btnOK.Text = "登录";
             this.btnOK.UseVisualStyleBackColor = true;
@@ -69,43 +72,48 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(259, 196);
+            this.btnCancel.Location = new System.Drawing.Point(194, 157);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 38);
+            this.btnCancel.Size = new System.Drawing.Size(56, 30);
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "取消";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(107, 32);
+            this.textBox1.Location = new System.Drawing.Point(80, 26);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(227, 25);
+            this.textBox1.Size = new System.Drawing.Size(171, 21);
             this.textBox1.TabIndex = 4;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(107, 80);
+            this.textBox2.Location = new System.Drawing.Point(80, 64);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(227, 25);
+            this.textBox2.Size = new System.Drawing.Size(171, 21);
             this.textBox2.TabIndex = 5;
             // 
             // txtUserName
             // 
             this.txtUserName.AutoSize = true;
-            this.txtUserName.Location = new System.Drawing.Point(31, 138);
+            this.txtUserName.Location = new System.Drawing.Point(23, 110);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(52, 15);
+            this.txtUserName.Size = new System.Drawing.Size(41, 12);
             this.txtUserName.TabIndex = 6;
             this.txtUserName.Text = "角色：";
             // 
             // radTeacher
             // 
             this.radTeacher.AutoSize = true;
-            this.radTeacher.Location = new System.Drawing.Point(107, 134);
+            this.radTeacher.Location = new System.Drawing.Point(80, 107);
+            this.radTeacher.Margin = new System.Windows.Forms.Padding(2);
             this.radTeacher.Name = "radTeacher";
-            this.radTeacher.Size = new System.Drawing.Size(58, 19);
+            this.radTeacher.Size = new System.Drawing.Size(47, 16);
             this.radTeacher.TabIndex = 7;
             this.radTeacher.Text = "老师";
             this.radTeacher.UseVisualStyleBackColor = true;
@@ -113,18 +121,19 @@
             // radStudent
             // 
             this.radStudent.AutoSize = true;
-            this.radStudent.Location = new System.Drawing.Point(259, 133);
+            this.radStudent.Location = new System.Drawing.Point(194, 106);
+            this.radStudent.Margin = new System.Windows.Forms.Padding(2);
             this.radStudent.Name = "radStudent";
-            this.radStudent.Size = new System.Drawing.Size(58, 19);
+            this.radStudent.Size = new System.Drawing.Size(47, 16);
             this.radStudent.TabIndex = 8;
             this.radStudent.Text = "学生";
             this.radStudent.UseVisualStyleBackColor = true;
             // 
             // FrmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(392, 261);
+            this.ClientSize = new System.Drawing.Size(294, 209);
             this.Controls.Add(this.radStudent);
             this.Controls.Add(this.radTeacher);
             this.Controls.Add(this.txtUserName);
@@ -135,6 +144,7 @@
             this.Controls.Add(this.txtPwd);
             this.Controls.Add(this.txtName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

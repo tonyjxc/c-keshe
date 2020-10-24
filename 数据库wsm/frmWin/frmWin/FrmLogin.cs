@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 using System.Configuration;//dbhelper 数据库帮助类
 using System.Data.SqlClient;
 using frmWin.wsm;
@@ -32,7 +31,7 @@ namespace frmWin
         }
         private void btnOK_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("server=localhost,1433;database=register_translate;UID=sa;PWD=zyh@197068;Integrated Security=False");
+            SqlConnection conn = new SqlConnection("server=" + MyGlobal.ip + ";database=dormitory;UID=sa;PWD=zyh@197068;Integrated Security=False");
             conn.Open();
             //获取用户名
             string userName = this.txtUserName.Text;

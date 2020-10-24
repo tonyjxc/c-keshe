@@ -6,8 +6,13 @@ using System.Windows.Forms;
 
 namespace frmWin
 {
+    public class MyGlobal
+    {
+        public static string ip = "tonyjxc.xyz,6220";
+    }
     static class Program
     {
+
         /// <summary>
         /// 应用程序的主入口点。
         /// </summary>
