@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace 数据库课设1._0.Properties
+namespace frmWin.Properties
 {
 
 
