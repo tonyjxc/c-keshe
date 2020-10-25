@@ -4,10 +4,15 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace 数据库课设1._0
+namespace frmWin
 {
+    public class MyGlobal
+    {
+        public static string ip = "tonyjxc.xyz,6220";
+    }
     static class Program
     {
+
         /// <summary>
         /// 应用程序的主入口点。
         /// </summary>
@@ -16,7 +21,7 @@ namespace 数据库课设1._0
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FrmLogin());
         }
     }
 }
