@@ -50,18 +50,72 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassInfo\AddClass.cs">
+    <Compile Include="building\building.cs" />
+    <Compile Include="building\buildingInsertForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClassInfo\AddClass.Designer.cs">
-      <DependentUpon>AddClass.cs</DependentUpon>
+    <Compile Include="building\buildingInsertForm.Designer.cs">
+      <DependentUpon>buildingInsertForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmDormAdd.cs">
+    <Compile Include="building\buildingManagerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmDormAdd.Designer.cs">
-      <DependentUpon>FrmDormAdd.cs</DependentUpon>
+    <Compile Include="building\buildingManagerForm.Designer.cs">
+      <DependentUpon>buildingManagerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="building\buildingUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="building\buildingUpdateForm.Designer.cs">
+      <DependentUpon>buildingUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="building\buildingWSM.cs" />
+    <Compile Include="dormType\dormType.cs" />
+    <Compile Include="dormType\dormTypeInsertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dormType\dormTypeInsertForm.Designer.cs">
+      <DependentUpon>dormTypeInsertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dormType\dormTypeManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dormType\dormTypeManageForm.Designer.cs">
+      <DependentUpon>dormTypeManageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dormType\dormTypeUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dormType\dormTypeUpdateForm.Designer.cs">
+      <DependentUpon>dormTypeUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dormType\dormTypeWSM.cs" />
+    <Compile Include="dorm\dorm.cs" />
+    <Compile Include="dorm\dormInsertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dorm\dormInsertForm.Designer.cs">
+      <DependentUpon>dormInsertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dorm\dormManageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dorm\dormManageForm.Designer.cs">
+      <DependentUpon>dormManageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dorm\dormUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dorm\dormUpdateForm.Designer.cs">
+      <DependentUpon>dormUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dorm\dormViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dorm\dormViewForm.Designer.cs">
+      <DependentUpon>dormViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dorm\dormwsm.cs" />
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,34 +128,50 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClassInfo\FrmClass.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ClassInfo\FrmClass.Designer.cs">
-      <DependentUpon>FrmClass.cs</DependentUpon>
-    </Compile>
     <Compile Include="fun\dormintory.cs" />
     <Compile Include="fun\dormType.cs" />
+    <Compile Include="fun\PageHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="fun\LoginInfo.cs" />
     <Compile Include="fun\SingleWindow.cs" />
     <Compile Include="fun\User.cs" />
     <Compile Include="fun\Validation.cs" />
-    <EmbeddedResource Include="ClassInfo\AddClass.resx">
-      <DependentUpon>AddClass.cs</DependentUpon>
+    <EmbeddedResource Include="building\buildingInsertForm.resx">
+      <DependentUpon>buildingInsertForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmDormAdd.resx">
-      <DependentUpon>FrmDormAdd.cs</DependentUpon>
+    <EmbeddedResource Include="building\buildingManagerForm.resx">
+      <DependentUpon>buildingManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="building\buildingUpdateForm.resx">
+      <DependentUpon>buildingUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dormType\dormTypeInsertForm.resx">
+      <DependentUpon>dormTypeInsertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dormType\dormTypeManageForm.resx">
+      <DependentUpon>dormTypeManageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dormType\dormTypeUpdateForm.resx">
+      <DependentUpon>dormTypeUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dorm\dormInsertForm.resx">
+      <DependentUpon>dormInsertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dorm\dormManageForm.resx">
+      <DependentUpon>dormManageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dorm\dormUpdateForm.resx">
+      <DependentUpon>dormUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dorm\dormViewForm.resx">
+      <DependentUpon>dormViewForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ClassInfo\FrmClass.resx">
-      <DependentUpon>FrmClass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
