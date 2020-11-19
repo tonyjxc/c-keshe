@@ -114,6 +114,31 @@ namespace frmWin
             SqlConnection conn = new SqlConnection("server=" + MyGlobal.ip + ";database=dormitory;UID=sa;PWD=zyh@197068;Integrated Security=False");
             conn.Open();
             getClassId();
+
+            int flag = 0;
+
+            // 验证classId
+            SqlCommand sql = new SqlCommand("select stuId from student where fk_classId = " + classId, conn);
+
+            SqlDataReader reader = sql.ExecuteReader();;
+            if (!reader.Read())
+            {
+                MessageBox.Show("该班级没有学生，可以直接删除！");
+            }
+            else
+            {
+                MessageBox.Show("该班级还有学生，已将学生放入待定班级！");
+                flag = 1;
+            }
+            reader.Close();
+
+            // 此时需要将学生移入待定班级
+            if (flag == 1)
+            {
+                string mychange = "update student set fk_classId =-1 where fk_classId = " + classId;
+                SqlCommand change = new SqlCommand(mychange, conn);               //定义OleDbCommnad对象并连接数据库             
+                change.ExecuteNonQuery();
+            }
             string myinsert = "delete from classinfo where classid = "+classId;
             SqlCommand mycom = new SqlCommand(myinsert, conn);               //定义OleDbCommnad对象并连接数据库             
             mycom.ExecuteNonQuery();

@@ -53,6 +53,7 @@
             this.收费种类管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.学生班级分配ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -148,7 +149,8 @@
             this.学生档案录入ToolStripMenuItem,
             this.学生档案查询ToolStripMenuItem,
             this.学生宿舍查询ToolStripMenuItem,
-            this.学生转宿ToolStripMenuItem});
+            this.学生转宿ToolStripMenuItem,
+            this.学生班级分配ToolStripMenuItem});
             this.学生管理ToolStripMenuItem.Name = "学生管理ToolStripMenuItem";
             this.学生管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
             this.学生管理ToolStripMenuItem.Text = "学生管理";
@@ -189,13 +191,13 @@
             // 教师档案录入ToolStripMenuItem
             // 
             this.教师档案录入ToolStripMenuItem.Name = "教师档案录入ToolStripMenuItem";
-            this.教师档案录入ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.教师档案录入ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.教师档案录入ToolStripMenuItem.Text = "教师档案录入";
             // 
             // 教师档案查询ToolStripMenuItem
             // 
             this.教师档案查询ToolStripMenuItem.Name = "教师档案查询ToolStripMenuItem";
-            this.教师档案查询ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.教师档案查询ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.教师档案查询ToolStripMenuItem.Text = "教师档案查询";
             // 
             // 收费管理ToolStripMenuItem
@@ -212,25 +214,25 @@
             // 住宿费到期提醒ToolStripMenuItem
             // 
             this.住宿费到期提醒ToolStripMenuItem.Name = "住宿费到期提醒ToolStripMenuItem";
-            this.住宿费到期提醒ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.住宿费到期提醒ToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.住宿费到期提醒ToolStripMenuItem.Text = "住宿费到期提醒";
             // 
             // 费用查询ToolStripMenuItem
             // 
             this.费用查询ToolStripMenuItem.Name = "费用查询ToolStripMenuItem";
-            this.费用查询ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.费用查询ToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.费用查询ToolStripMenuItem.Text = "费用查询";
             // 
             // 收费统计ToolStripMenuItem
             // 
             this.收费统计ToolStripMenuItem.Name = "收费统计ToolStripMenuItem";
-            this.收费统计ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.收费统计ToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.收费统计ToolStripMenuItem.Text = "收费统计";
             // 
             // 收费种类管理ToolStripMenuItem
             // 
             this.收费种类管理ToolStripMenuItem.Name = "收费种类管理ToolStripMenuItem";
-            this.收费种类管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.收费种类管理ToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.收费种类管理ToolStripMenuItem.Text = "收费种类管理";
             // 
             // 帮助ToolStripMenuItem
@@ -246,6 +248,13 @@
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
+            // 学生班级分配ToolStripMenuItem
+            // 
+            this.学生班级分配ToolStripMenuItem.Name = "学生班级分配ToolStripMenuItem";
+            this.学生班级分配ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.学生班级分配ToolStripMenuItem.Text = "学生班级分配";
+            this.学生班级分配ToolStripMenuItem.Click += new System.EventHandler(this.学生班级分配ToolStripMenuItem_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -254,7 +263,7 @@
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmMain";
             this.Text = "宿舍管理系统主界面";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMain_FormClosed);
@@ -293,5 +302,6 @@
         private System.Windows.Forms.ToolStripMenuItem 收费种类管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 帮助ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 学生班级分配ToolStripMenuItem;
     }
 }

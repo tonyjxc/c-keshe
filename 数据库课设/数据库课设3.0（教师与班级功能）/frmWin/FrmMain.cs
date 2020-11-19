@@ -82,5 +82,20 @@ namespace frmWin
         {
             this.Close();
         }
+
+
+        private NoClassStuFrm NCStu;
+        private void 学生班级分配ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (NCStu == null || NCStu.IsDisposed)
+            {
+                NCStu = new NoClassStuFrm();
+            }
+            Size OldSize = NCStu.Size;
+            this.Size = new Size(OldSize.Width + 20, OldSize.Height + 70);
+            NCStu.MdiParent = this;
+            NCStu.Location = new Point(0, 0); ;
+            NCStu.Show();
+        }
     }
 }

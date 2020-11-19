@@ -56,6 +56,12 @@
     <Compile Include="ClassInfo\AddClass.Designer.cs">
       <DependentUpon>AddClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClassInfo\NoClassStuFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassInfo\NoClassStuFrm.Designer.cs">
+      <DependentUpon>NoClassStuFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDormAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     <Compile Include="fun\Validation.cs" />
     <EmbeddedResource Include="ClassInfo\AddClass.resx">
       <DependentUpon>AddClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassInfo\NoClassStuFrm.resx">
+      <DependentUpon>NoClassStuFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDormAdd.resx">
       <DependentUpon>FrmDormAdd.cs</DependentUpon>
