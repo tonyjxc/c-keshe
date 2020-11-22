@@ -1,4 +1,5 @@
 ﻿using frmWin.ClassInfo;
+using frmWin.Student;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -96,6 +97,20 @@ namespace frmWin
             NCStu.MdiParent = this;
             NCStu.Location = new Point(0, 0); ;
             NCStu.Show();
+        }
+
+        private FrmStudent FrmStu;
+        private void 学生档案查询ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (FrmStu == null || FrmStu.IsDisposed)
+            {
+                FrmStu = new FrmStudent();
+            }
+            Size OldSize = FrmStu.Size;
+            this.Size = new Size(OldSize.Width + 20, OldSize.Height + 70);
+            FrmStu.MdiParent = this;
+            FrmStu.Location = new Point(0, 0); ;
+            FrmStu.Show();
         }
     }
 }

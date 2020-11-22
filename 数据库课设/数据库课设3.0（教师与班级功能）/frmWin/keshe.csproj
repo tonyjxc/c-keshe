@@ -94,6 +94,18 @@
     <Compile Include="fun\SingleWindow.cs" />
     <Compile Include="fun\User.cs" />
     <Compile Include="fun\Validation.cs" />
+    <Compile Include="Student\ChangeStuInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\ChangeStuInfo.Designer.cs">
+      <DependentUpon>ChangeStuInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\FrmStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\FrmStudent.Designer.cs">
+      <DependentUpon>FrmStudent.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ClassInfo\AddClass.resx">
       <DependentUpon>AddClass.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +134,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Student\ChangeStuInfo.resx">
+      <DependentUpon>ChangeStuInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\FrmStudent.resx">
+      <DependentUpon>FrmStudent.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

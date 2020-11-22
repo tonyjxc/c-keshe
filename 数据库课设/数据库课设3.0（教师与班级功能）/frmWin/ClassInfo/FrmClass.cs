@@ -120,7 +120,7 @@ namespace frmWin
             // 验证classId
             SqlCommand sql = new SqlCommand("select stuId from student where fk_classId = " + classId, conn);
 
-            SqlDataReader reader = sql.ExecuteReader();;
+            SqlDataReader reader = sql.ExecuteReader();
             if (!reader.Read())
             {
                 MessageBox.Show("该班级没有学生，可以直接删除！");

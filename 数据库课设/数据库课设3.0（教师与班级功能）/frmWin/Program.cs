@@ -1,5 +1,6 @@
 ﻿using frmWin;
 using frmWin.ClassInfo;
+using frmWin.Student;
 using System;
 using System.Collections.Generic;
 using System.Linq;
