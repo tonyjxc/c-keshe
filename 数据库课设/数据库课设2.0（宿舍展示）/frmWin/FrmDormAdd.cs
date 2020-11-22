@@ -32,80 +32,16 @@ namespace frmWin
             SqlCommand sql = new SqlCommand("select buildId from building", conn);
             SqlDataReader reader = sql.ExecuteReader();
             DataTable dt = new DataTable();
-            while (reader.Read())
+            while (reader.Read())//决定行数
             {
-                this.cmbBuild.Items.Add(reader[0].ToString());
+                this.cmbBuild.Items.Add(reader[0].ToString());//第0列
             }
             cmbBuild.SelectedIndex = 0;
             //设置id值属性和文本属性
             reader.Close();
             conn.Close();
 
-            //填充表格
-            /*
-            SqlConnection conn = new SqlConnection("server=" + MyGlobal.ip + ";database=dormitory;UID=sa;PWD=zyh@197068;Integrated Security=False");
-            conn.Open();
-            String str = "select buildID,dormCount,dormFloor from building";
-            SqlDataAdapter data = new SqlDataAdapter(str, conn);
-            DataSet dt = new DataSet();
-            data.Fill(dt, "table1");
-            DataTable datatable = dt.Tables["table1"];
-            dgvDorm.DataSource = datatable;
-            conn.Close();
             
-             */
-             
-             /*
-            //想要加载宿舍楼的信息，那么查询
-            SqlConnection conn = new SqlConnection("server=" + MyGlobal.ip + ";database=dormitory;UID=sa;PWD=zyh@197068;Integrated Security=False");
-            conn.Open();
-            SqlCommand sql = new SqlCommand("select buildID,dormCount,dormFloor from building",conn);
-            //只能一行一行的读取
-            SqlDataReader reader = sql.ExecuteReader();
-
-            ///定义DataTable  
-            DataTable dt = new DataTable();
-            try
-            {
-                ///动态添加表的数据列  
-                for (int i = 0; i < reader.FieldCount; i++)
-                {
-                    DataColumn myDataColumn = new DataColumn();
-                    myDataColumn.DataType = reader.GetFieldType(i);
-                    myDataColumn.ColumnName = reader.GetName(i);
-                    dt.Columns.Add(myDataColumn);
-                }
-                ///添加表的数据  
-                while (reader.Read())
-                {
-                    DataRow myDataRow = dt.NewRow();
-                    for (int i = 0; i < dt.Columns.Count; i++)
-                    {
-                        myDataRow[i] = dt.Columns[i].ToString();
-                    }
-                    dt.Rows.Add(myDataRow);
-                    myDataRow = null;
-                }
-                ///关闭数据读取器  
-                reader.Close();
-                return;
-            }
-            catch (Exception ex) 
-            { MessageBox.Show("出错了" + ex.Message); }
-
-            //我想看到的是 buildID buildName
-            //              28      一号楼
-            //              29      二号楼   这种效果（没有数据库）
-            //              ...     ...
-            //buildID是给程序使用的，buildName是给人看的
-
-            //将DataTable的数据绑定到下拉框上
-            //1.设置下拉框绑定的ID值属性
-            this.cmbBuild.ValueMember = "buildID";
-            //2.设置下拉框绑定的文本属性
-            this.cmbBuild.DisplayMember = "buildName";
-            //绑定DataTable到下拉框上
-            this.cmbBuild.DataSource = dt;*/
         }
 
         //加载宿舍类型下拉框
@@ -113,15 +49,13 @@ namespace frmWin
         {
             SqlConnection conn = new SqlConnection("server=" + MyGlobal.ip + ";database=dormitory;UID=sa;PWD=zyh@197068;Integrated Security=False");
             conn.Open();
-            //想要达到宿舍类型名称和性别拼接起来，这样显示出来比较符合常理。
-            //比如  四人间-男  二人间-女，但是中间那个-我不知道怎么用给定格式输出
-            //SqlCommand sql = new SqlCommand("select buildID,dormCount,dormFloor from building", conn);
+            
             SqlCommand sql = new SqlCommand("select typeID,typeName AS typeName from DormType", conn);
             SqlDataReader reader = sql.ExecuteReader();
             DataTable dt = new DataTable();
             while (reader.Read())
             {
-                this.cmbDormType.Items.Add( reader[0].ToString() +"\t("+ reader[1].ToString()+"");
+                this.cmbDormType.Items.Add( reader[0].ToString() +"\t("+ reader[1].ToString()+")");
             }
             cmbDormType.SelectedIndex = 0;
             //设置id值属性和文本属性
@@ -275,38 +209,7 @@ namespace frmWin
 
 
 
-            /*
-            try
-            {
-                ///动态添加表的数据列  
-                for (int i = 0; i < reader.FieldCount; i++)
-                {
-                    DataColumn myDataColumn = new DataColumn();
-                    myDataColumn.DataType = reader.GetFieldType(i);
-                    myDataColumn.ColumnName = reader.GetName(i);
-                    dt.Columns.Add(myDataColumn);
-                }
-                ///添加表的数据  
-                while (reader.Read())
-                {
-                    DataRow myDataRow = dt.NewRow();
-                    for (int i = 0; i < dt.Columns.Count; i++)
-                    {
-                        myDataRow[i] = dt.Columns[i].ToString();
-                    }
-                    dt.Rows.Add(myDataRow);
-                    myDataRow = null;
-                }
-                ///关闭数据读取器  
-                reader.Close();
-                return;
-            }
-            catch (Exception ex)
-            { MessageBox.Show("出错了" + ex.Message); }
-            //将数据绑定到datagridview上
-            this.dgvDorm.DataSource = dt;
-            reader.Close();
-            conn.Close();*/
+            
         }
         //添加单个宿舍
         private void btnSingleAdd_Click(object sender, EventArgs e)
@@ -327,15 +230,16 @@ namespace frmWin
         //批量添加宿舍
         public void BatchAddDorm()
         {
+            string dormnum = this.txtDormNo.Text;
             //这个checkif作为一个大函数，只有不重复才能批量添加
             //这里的ref有问题，和上面重复了
-            //if (!Validation.checkDormNO(ref dormnum))
-            //{
-             //   MessageBox.Show("宿舍已经存在，请勿重复添加！");
-             //   return;
-            //}
+            if (!Validation.checkDormNO(ref dormnum))
+            {
+                MessageBox.Show("宿舍已经存在，请勿重复添加！");
+               return;
+            }
             //校验宿舍的开始编号
-            string dormnum = this.txtStartNo.Text;
+            
             if(!Validation.ValidateInt(ref dormnum, 101, 999))
             {
                 MessageBox.Show("宿舍开始编号必须为整数，并且在101-999之间");
