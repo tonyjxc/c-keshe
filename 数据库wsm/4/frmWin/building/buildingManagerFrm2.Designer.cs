@@ -153,6 +153,7 @@
             this.Controls.Add(this.btnExit);
             this.Name = "buildingManagerFrm2";
             this.Text = "buildingManagerFrmw";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.buildingManagerFrm2_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dgvbuilding)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

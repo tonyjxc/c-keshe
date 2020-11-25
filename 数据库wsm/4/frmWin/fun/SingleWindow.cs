@@ -17,17 +17,17 @@ namespace frmWin.fun
     class SingleWindow
     {
         ////登录窗体唯一性
-        public static FrmLogin lf = new FrmLogin();
+        public static FrmLogin2 lf = new FrmLogin2();
 
         //保持dormType包中的窗体唯一性
-        public static dormTypeManageForm dtmf = new dormTypeManageForm();
-        public static dormTypeInsertForm dtif = new dormTypeInsertForm();
-        public static dormTypeUpdateForm dyuf = new dormTypeUpdateForm();
+        public static dormTypeManageFrm2 dtmf = new dormTypeManageFrm2();
+        public static dormTypeInsertFrm2 dtif = new dormTypeInsertFrm2();
+        public static dormTypeUpdateFrm2 dyuf = new dormTypeUpdateFrm2("");
 
         //保持dorm包中的窗体唯一性
-        public static dormManageForm dmf = new dormManageForm();
-        public static dormInsertForm dif = new dormInsertForm();
-        public static dormUpdateForm duf = new dormUpdateForm();
+        public static dormManageFrm2 dmf = new dormManageFrm2();
+        public static dormInsertFrm2 dif = new dormInsertFrm2();
+        public static dormUpdateFrm2 duf = new dormUpdateFrm2("","","");
         public static dormViewForm dvf = new dormViewForm();
 
         //保持building包中的窗体唯一性

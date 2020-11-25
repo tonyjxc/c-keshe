@@ -1,5 +1,7 @@
 ﻿using frmWin;
 using frmWin.building;
+using frmWin.dorm;
+using frmWin.dormType;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +25,7 @@ namespace keshe
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new buildingManagerFrm2());
+            Application.Run(new FrmLogin2());
         }
     }
 }

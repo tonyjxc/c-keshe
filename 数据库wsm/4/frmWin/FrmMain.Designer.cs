@@ -29,31 +29,31 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.学生管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.学生档案录入ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.学生档案查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.学生宿舍查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.教师管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.收费管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.教师类型ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.教师查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.宿舍管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.楼层管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.宿舍类型ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.宿舍管理ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.班级管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.班级信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.种类管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.收费管理ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.收费统计ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.高级查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.修改个人信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.更换用户ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.学生入住ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.详细管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.转或退宿ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.班级管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.班级信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.学生管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.学生档案录入ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.学生档案查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.学生宿舍查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.收费管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.种类管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.收费管理ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.收费统计ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.高级查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.修改个人信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.更换用户ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,35 +74,6 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // 学生管理ToolStripMenuItem
-            // 
-            this.学生管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.学生档案录入ToolStripMenuItem,
-            this.学生档案查询ToolStripMenuItem,
-            this.学生宿舍查询ToolStripMenuItem});
-            this.学生管理ToolStripMenuItem.Name = "学生管理ToolStripMenuItem";
-            this.学生管理ToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
-            this.学生管理ToolStripMenuItem.Text = "学生管理";
-            // 
-            // 学生档案录入ToolStripMenuItem
-            // 
-            this.学生档案录入ToolStripMenuItem.Name = "学生档案录入ToolStripMenuItem";
-            this.学生档案录入ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.学生档案录入ToolStripMenuItem.Text = "学生档案录入";
-            this.学生档案录入ToolStripMenuItem.Click += new System.EventHandler(this.学生档案录入ToolStripMenuItem_Click);
-            // 
-            // 学生档案查询ToolStripMenuItem
-            // 
-            this.学生档案查询ToolStripMenuItem.Name = "学生档案查询ToolStripMenuItem";
-            this.学生档案查询ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.学生档案查询ToolStripMenuItem.Text = "学生档案查询";
-            // 
-            // 学生宿舍查询ToolStripMenuItem
-            // 
-            this.学生宿舍查询ToolStripMenuItem.Name = "学生宿舍查询ToolStripMenuItem";
-            this.学生宿舍查询ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.学生宿舍查询ToolStripMenuItem.Text = "学生宿舍查询";
-            // 
             // 教师管理ToolStripMenuItem
             // 
             this.教师管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -112,42 +83,16 @@
             this.教师管理ToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
             this.教师管理ToolStripMenuItem.Text = "教师管理";
             // 
-            // 收费管理ToolStripMenuItem
-            // 
-            this.收费管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.种类管理ToolStripMenuItem,
-            this.收费管理ToolStripMenuItem1,
-            this.收费统计ToolStripMenuItem});
-            this.收费管理ToolStripMenuItem.Name = "收费管理ToolStripMenuItem";
-            this.收费管理ToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
-            this.收费管理ToolStripMenuItem.Text = "收费管理";
-            // 
-            // 帮助ToolStripMenuItem
-            // 
-            this.帮助ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.高级查询ToolStripMenuItem,
-            this.修改个人信息ToolStripMenuItem,
-            this.更换用户ToolStripMenuItem});
-            this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
-            this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
-            this.帮助ToolStripMenuItem.Text = "帮助";
-            // 
-            // 退出ToolStripMenuItem
-            // 
-            this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
-            this.退出ToolStripMenuItem.Text = "退出";
-            // 
             // 教师类型ToolStripMenuItem
             // 
             this.教师类型ToolStripMenuItem.Name = "教师类型ToolStripMenuItem";
-            this.教师类型ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.教师类型ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.教师类型ToolStripMenuItem.Text = "教师类型";
             // 
             // 教师查询ToolStripMenuItem
             // 
             this.教师查询ToolStripMenuItem.Name = "教师查询ToolStripMenuItem";
-            this.教师查询ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.教师查询ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.教师查询ToolStripMenuItem.Text = "教师查询";
             // 
             // 宿舍管理ToolStripMenuItem
@@ -163,14 +108,14 @@
             // 楼层管理ToolStripMenuItem
             // 
             this.楼层管理ToolStripMenuItem.Name = "楼层管理ToolStripMenuItem";
-            this.楼层管理ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.楼层管理ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.楼层管理ToolStripMenuItem.Text = "楼层管理";
             this.楼层管理ToolStripMenuItem.Click += new System.EventHandler(this.楼层管理ToolStripMenuItem_Click);
             // 
             // 宿舍类型ToolStripMenuItem
             // 
             this.宿舍类型ToolStripMenuItem.Name = "宿舍类型ToolStripMenuItem";
-            this.宿舍类型ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.宿舍类型ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.宿舍类型ToolStripMenuItem.Text = "宿舍类型";
             this.宿舍类型ToolStripMenuItem.Click += new System.EventHandler(this.宿舍类型ToolStripMenuItem_Click);
             // 
@@ -181,9 +126,28 @@
             this.详细管理ToolStripMenuItem,
             this.转或退宿ToolStripMenuItem});
             this.宿舍管理ToolStripMenuItem1.Name = "宿舍管理ToolStripMenuItem1";
-            this.宿舍管理ToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.宿舍管理ToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
             this.宿舍管理ToolStripMenuItem1.Text = "宿舍管理";
             this.宿舍管理ToolStripMenuItem1.Click += new System.EventHandler(this.宿舍管理ToolStripMenuItem1_Click);
+            // 
+            // 学生入住ToolStripMenuItem
+            // 
+            this.学生入住ToolStripMenuItem.Name = "学生入住ToolStripMenuItem";
+            this.学生入住ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.学生入住ToolStripMenuItem.Text = "学生入住";
+            // 
+            // 详细管理ToolStripMenuItem
+            // 
+            this.详细管理ToolStripMenuItem.Name = "详细管理ToolStripMenuItem";
+            this.详细管理ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.详细管理ToolStripMenuItem.Text = "详细管理";
+            this.详细管理ToolStripMenuItem.Click += new System.EventHandler(this.详细管理ToolStripMenuItem_Click);
+            // 
+            // 转或退宿ToolStripMenuItem
+            // 
+            this.转或退宿ToolStripMenuItem.Name = "转或退宿ToolStripMenuItem";
+            this.转或退宿ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.转或退宿ToolStripMenuItem.Text = "转或退宿";
             // 
             // 班级管理ToolStripMenuItem
             // 
@@ -196,62 +160,99 @@
             // 班级信息ToolStripMenuItem
             // 
             this.班级信息ToolStripMenuItem.Name = "班级信息ToolStripMenuItem";
-            this.班级信息ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.班级信息ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.班级信息ToolStripMenuItem.Text = "班级信息";
+            // 
+            // 学生管理ToolStripMenuItem
+            // 
+            this.学生管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.学生档案录入ToolStripMenuItem,
+            this.学生档案查询ToolStripMenuItem,
+            this.学生宿舍查询ToolStripMenuItem});
+            this.学生管理ToolStripMenuItem.Name = "学生管理ToolStripMenuItem";
+            this.学生管理ToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
+            this.学生管理ToolStripMenuItem.Text = "学生管理";
+            // 
+            // 学生档案录入ToolStripMenuItem
+            // 
+            this.学生档案录入ToolStripMenuItem.Name = "学生档案录入ToolStripMenuItem";
+            this.学生档案录入ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
+            this.学生档案录入ToolStripMenuItem.Text = "学生档案录入";
+            this.学生档案录入ToolStripMenuItem.Click += new System.EventHandler(this.学生档案录入ToolStripMenuItem_Click);
+            // 
+            // 学生档案查询ToolStripMenuItem
+            // 
+            this.学生档案查询ToolStripMenuItem.Name = "学生档案查询ToolStripMenuItem";
+            this.学生档案查询ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
+            this.学生档案查询ToolStripMenuItem.Text = "学生档案查询";
+            // 
+            // 学生宿舍查询ToolStripMenuItem
+            // 
+            this.学生宿舍查询ToolStripMenuItem.Name = "学生宿舍查询ToolStripMenuItem";
+            this.学生宿舍查询ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
+            this.学生宿舍查询ToolStripMenuItem.Text = "学生宿舍查询";
+            // 
+            // 收费管理ToolStripMenuItem
+            // 
+            this.收费管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.种类管理ToolStripMenuItem,
+            this.收费管理ToolStripMenuItem1,
+            this.收费统计ToolStripMenuItem});
+            this.收费管理ToolStripMenuItem.Name = "收费管理ToolStripMenuItem";
+            this.收费管理ToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
+            this.收费管理ToolStripMenuItem.Text = "收费管理";
             // 
             // 种类管理ToolStripMenuItem
             // 
             this.种类管理ToolStripMenuItem.Name = "种类管理ToolStripMenuItem";
-            this.种类管理ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.种类管理ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.种类管理ToolStripMenuItem.Text = "种类管理";
             // 
             // 收费管理ToolStripMenuItem1
             // 
             this.收费管理ToolStripMenuItem1.Name = "收费管理ToolStripMenuItem1";
-            this.收费管理ToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.收费管理ToolStripMenuItem1.Size = new System.Drawing.Size(152, 26);
             this.收费管理ToolStripMenuItem1.Text = "收费管理";
             // 
             // 收费统计ToolStripMenuItem
             // 
             this.收费统计ToolStripMenuItem.Name = "收费统计ToolStripMenuItem";
-            this.收费统计ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.收费统计ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.收费统计ToolStripMenuItem.Text = "收费统计";
+            // 
+            // 帮助ToolStripMenuItem
+            // 
+            this.帮助ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.高级查询ToolStripMenuItem,
+            this.修改个人信息ToolStripMenuItem,
+            this.更换用户ToolStripMenuItem});
+            this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
+            this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
+            this.帮助ToolStripMenuItem.Text = "帮助";
             // 
             // 高级查询ToolStripMenuItem
             // 
             this.高级查询ToolStripMenuItem.Name = "高级查询ToolStripMenuItem";
-            this.高级查询ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.高级查询ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
             this.高级查询ToolStripMenuItem.Text = "高级查询";
             // 
             // 修改个人信息ToolStripMenuItem
             // 
             this.修改个人信息ToolStripMenuItem.Name = "修改个人信息ToolStripMenuItem";
-            this.修改个人信息ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.修改个人信息ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
             this.修改个人信息ToolStripMenuItem.Text = "修改个人信息";
             // 
             // 更换用户ToolStripMenuItem
             // 
             this.更换用户ToolStripMenuItem.Name = "更换用户ToolStripMenuItem";
-            this.更换用户ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.更换用户ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
             this.更换用户ToolStripMenuItem.Text = "更换用户";
             // 
-            // 学生入住ToolStripMenuItem
+            // 退出ToolStripMenuItem
             // 
-            this.学生入住ToolStripMenuItem.Name = "学生入住ToolStripMenuItem";
-            this.学生入住ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.学生入住ToolStripMenuItem.Text = "学生入住";
-            // 
-            // 详细管理ToolStripMenuItem
-            // 
-            this.详细管理ToolStripMenuItem.Name = "详细管理ToolStripMenuItem";
-            this.详细管理ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.详细管理ToolStripMenuItem.Text = "详细管理";
-            // 
-            // 转或退宿ToolStripMenuItem
-            // 
-            this.转或退宿ToolStripMenuItem.Name = "转或退宿ToolStripMenuItem";
-            this.转或退宿ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.转或退宿ToolStripMenuItem.Text = "转或退宿";
+            this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
+            this.退出ToolStripMenuItem.Text = "退出";
             // 
             // FrmMain
             // 
@@ -263,6 +264,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmMain";
             this.Text = "宿舍管理系统主界面";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMain_FormClosed);
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.menuStrip1.ResumeLayout(false);

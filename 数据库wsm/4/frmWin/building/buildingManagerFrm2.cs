@@ -14,6 +14,7 @@ namespace frmWin.building
 {
     public partial class buildingManagerFrm2 : Form
     {
+        public static bool sign = false;
         public buildingManagerFrm2()
         {
             InitializeComponent();
@@ -76,6 +77,11 @@ namespace frmWin.building
             string buildingname = txtDromName.Text;
             buildingUpdateFrm2 update = new buildingUpdateFrm2(buildingname);
             update.Show();
+        }
+
+        private void buildingManagerFrm2_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            sign = false;
         }
     }
 }

@@ -1,4 +1,7 @@
-﻿using frmWin.fun;
+﻿using frmWin.building;
+using frmWin.dorm;
+using frmWin.dormType;
+using frmWin.fun;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +16,7 @@ namespace frmWin
 {
     public partial class FrmMain : Form
     {
+        public static bool sign = false;
         public FrmMain()
         {
             InitializeComponent();
@@ -35,20 +39,65 @@ namespace frmWin
 
         private void 楼层管理ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SingleWindow.bmf.MdiParent = this;
-            SingleWindow.bmf.Show();
+            
+            if (buildingManagerFrm2.sign == false)
+            {
+                buildingManagerFrm2 f = new buildingManagerFrm2();
+                //f.MdiParent = this;
+                buildingManagerFrm2.sign = true;
+                f.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("该窗体已经存在~");
+                return;
+            }
+            
         }
 
         private void 宿舍类型ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SingleWindow.dtmf.MdiParent = this;
-            SingleWindow.dtmf.Show();
+            if (dormTypeManageFrm2.sign == false)
+            {
+                dormTypeManageFrm2 f = new dormTypeManageFrm2();
+                //f.MdiParent = this;
+                dormTypeManageFrm2.sign = true;
+                f.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("该窗体已经存在~");
+                return;
+            }
         }
 
         private void 宿舍管理ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            SingleWindow.buf.MdiParent = this;
-            SingleWindow.buf.Show();
+            
+        }
+
+        private void 详细管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dormTypeManageFrm2.sign == false)
+            {
+                dormTypeManageFrm2 f = new dormTypeManageFrm2();
+                //f.MdiParent = this;
+                dormTypeManageFrm2.sign = true;
+                f.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("该窗体已经存在~");
+                return;
+            }
+        }
+
+        private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            sign = false;
         }
     }
 }
