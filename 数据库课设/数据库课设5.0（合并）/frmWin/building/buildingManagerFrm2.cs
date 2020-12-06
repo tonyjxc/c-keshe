@@ -14,11 +14,17 @@ namespace frmWin.building
 {
     public partial class buildingManagerFrm2 : Form
     {
-        private MyGlobal jumpinfo;
+        public MyGlobal jumpinfo;
         public static bool sign = false;
         public buildingManagerFrm2(MyGlobal jumpinfo2)
         {
-            jumpinfo = jumpinfo2;
+            this.jumpinfo = jumpinfo2;
+            if (this.jumpinfo.user == "student")
+            {
+                MessageBox.Show("请用教师身份登录");
+                this.Size = new Size(500, 0);
+                return;
+            }
             InitializeComponent();
             LoadDormName();
             LoadDormInfo();

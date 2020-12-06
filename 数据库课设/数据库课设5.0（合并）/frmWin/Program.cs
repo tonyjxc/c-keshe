@@ -13,9 +13,9 @@ namespace keshe
     public class MyGlobal
     {
         public static string ip = "tonyjxc.xyz,6220";
-        public string tid = "0";
-        public string stuid = "0";
-        public string user = "Null";
+        public string user;
+        public string stuId;
+        public string teachId;
     }
     static class Program
     {
@@ -27,8 +27,8 @@ namespace keshe
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmLogin2());
+
         }
     }
 }

@@ -4,6 +4,7 @@ using frmWin.dorm;
 using frmWin.dormType;
 using frmWin.fun;
 using frmWin.Student;
+using frmWin.teacher;
 using keshe;
 using System;
 using System.Collections.Generic;
@@ -19,13 +20,11 @@ namespace frmWin
 {
     public partial class FrmMain : Form
     {
-        public MyGlobal jumpinfo ;
-        public static bool sign = false;
-        public FrmMain(MyGlobal jumpinfo1)
+        public MyGlobal jumpinfo;
+        public FrmMain(MyGlobal jumpinfo2)
         {
-            this.jumpinfo = jumpinfo1;
+            this.jumpinfo = jumpinfo2;
             InitializeComponent();
-            //MessageBox.Show("我是"+jumpinfo.user+"id:" + jumpinfo.stuid);
         }
 
         private void FrmMain_Load(object sender, EventArgs e)
@@ -46,7 +45,6 @@ namespace frmWin
         private buildingManagerFrm2 buildingman;
         private void 楼层管理ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
             if (buildingman == null || buildingman.IsDisposed)
             {
                 buildingman = new buildingManagerFrm2(jumpinfo);
@@ -58,18 +56,17 @@ namespace frmWin
             buildingman.Show();
         }
 
-
         private void 宿舍类型ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (dormType == null || dormType.IsDisposed)
+            if (dormtype == null || dormtype.IsDisposed)
             {
-                dormType = new dormTypeManageFrm2();
+                dormtype = new dormTypeManageFrm2(jumpinfo);
             }
-            Size OldSize = dormType.Size;
+            Size OldSize = dormtype.Size;
             this.Size = new Size(OldSize.Width + 20, OldSize.Height + 70);
-            dormType.MdiParent = this;
-            dormType.Location = new Point(0, 0); ;
-            dormType.Show();
+            dormtype.MdiParent = this;
+            dormtype.Location = new Point(0, 0); ;
+            dormtype.Show();
         }
 
         private void 宿舍管理ToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -77,43 +74,51 @@ namespace frmWin
             
         }
 
-        private dormTypeManageFrm2 dormType;
+        private dormTypeManageFrm2 dormtype;
         private void 详细管理ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (dormType == null || dormType.IsDisposed)
+            if (dormtype == null || dormtype.IsDisposed)
             {
-                dormType = new dormTypeManageFrm2();
+                dormtype = new dormTypeManageFrm2(jumpinfo);
             }
-            Size OldSize = dormType.Size;
+            Size OldSize = dormtype.Size;
             this.Size = new Size(OldSize.Width + 20, OldSize.Height + 70);
-            dormType.MdiParent = this;
-            dormType.Location = new Point(0, 0); ;
-            dormType.Show();
-
+            dormtype.MdiParent = this;
+            dormtype.Location = new Point(0, 0); ;
+            dormtype.Show();
         }
 
         private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            sign = false;
         }
 
+        private FrmClass FC;
+        private void 班级信息ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (FC == null || FC.IsDisposed)
+            {
+                FC = new FrmClass(jumpinfo);
+            }
+
+            Size OldSize = FC.Size;
+
+            this.Size = new Size(OldSize.Width + 20, OldSize.Height + 70);
+            FC.MdiParent = this;
+            FC.Location = new Point(0, 0);
+            FC.Show();
+        }
         private AddClass AddC;
         private void 添加班级ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (AddC == null || AddC.IsDisposed)
             {
-                AddC = new AddClass();
+                AddC = new AddClass(jumpinfo);
             }
             Size OldSize = AddC.Size;
             this.Size = new Size(OldSize.Width + 20, OldSize.Height + 70);
             AddC.MdiParent = this;
             AddC.Location = new Point(0, 0); ;
             AddC.Show();
-        }
-
-        private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private NoClassStuFrm NCStu;
@@ -135,7 +140,7 @@ namespace frmWin
         {
             if (FrmStu == null || FrmStu.IsDisposed)
             {
-                FrmStu = new FrmStudent();
+                FrmStu = new FrmStudent(jumpinfo);
             }
             Size OldSize = FrmStu.Size;
             this.Size = new Size(OldSize.Width + 20, OldSize.Height + 70);
@@ -144,22 +149,63 @@ namespace frmWin
             FrmStu.Show();
         }
 
-        private FrmClass FC;
-        private void 班级信息查询ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private FrmTeacher frmteacher;
+        private void 教师查询ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frmteacher == null || frmteacher.IsDisposed)
+            {
+                frmteacher = new FrmTeacher(jumpinfo);
+            }
+            Size OldSize = frmteacher.Size;
+            this.Size = new Size(OldSize.Width + 20, OldSize.Height + 70);
+            frmteacher.MdiParent = this;
+            frmteacher.Location = new Point(0, 0); ;
+            frmteacher.Show();
+        }
+
+        private ChangeTeachInfo ChangeTeacher;
+        private void 教师信息修改老师ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ChangeTeacher == null || ChangeTeacher.IsDisposed)
+            {
+                ChangeTeacher = new ChangeTeachInfo(jumpinfo);
+            }
+            Size OldSize = ChangeTeacher.Size;
+            this.Size = new Size(OldSize.Width + 20, OldSize.Height + 70);
+            ChangeTeacher.MdiParent = this;
+            ChangeTeacher.Location = new Point(0, 0); ;
+            ChangeTeacher.Show();
+        }
+
+        private void 教师档案录入ToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
 
-            if (FC == null || FC.IsDisposed)
+        private ChangeStuInfo ChangeStu;
+        private void 学生信息修改学生ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ChangeStu == null || ChangeStu.IsDisposed)
             {
-                FC = new FrmClass();
+                ChangeStu = new ChangeStuInfo(jumpinfo);
             }
-
-            Size OldSize = FC.Size;
-
+            Size OldSize = ChangeStu.Size;
             this.Size = new Size(OldSize.Width + 20, OldSize.Height + 70);
-            FC.MdiParent = this;
-            FC.Location = new Point(0, 0);
-            FC.Show();
+            ChangeStu.MdiParent = this;
+            ChangeStu.Location = new Point(0, 0); ;
+            ChangeStu.Show();
+        }
+
+        private void 更换账号ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmLogin2 start = new FrmLogin2();
+            start.Show();
+            this.Hide();
         }
     }
 }

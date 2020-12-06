@@ -15,12 +15,7 @@ namespace frmWin
 {
     public partial class FrmLogin2 : Form
     {
-        public FrmLogin2()
-        {
-            InitializeComponent();
-        }
-
-        private string getstuId()
+        public string getstuId()
         {
             SqlConnection conn = new SqlConnection("server=" + MyGlobal.ip + ";database=dormitory;UID=sa;PWD=zyh@197068;Integrated Security=False");
             conn.Open();
@@ -28,30 +23,29 @@ namespace frmWin
             SqlCommand sql = new SqlCommand(sqlquery, conn);
             SqlDataReader reader = sql.ExecuteReader();
             reader.Read();
-            string stuid = reader[0].ToString();
-
-            return stuid;
+            return reader[0].ToString();
         }
 
-        private string getteacherId()
+        public string getteachId()
         {
             SqlConnection conn = new SqlConnection("server=" + MyGlobal.ip + ";database=dormitory;UID=sa;PWD=zyh@197068;Integrated Security=False");
             conn.Open();
-            string sqlquery = @"select teachId from teacher where stuNum = '" + this.txtUser.Text + "'";
+            string sqlquery = @"select teachId from teacher where teachUserName = '" + this.txtUser.Text + "'";
             SqlCommand sql = new SqlCommand(sqlquery, conn);
             SqlDataReader reader = sql.ExecuteReader();
             reader.Read();
-            string teachid = reader[0].ToString();
-
-            return teachid;
+            return reader[0].ToString();
+        }
+        public FrmLogin2()
+        {
+            InitializeComponent();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
+            MyGlobal jumpinfo = new MyGlobal();
             string userid = this.txtUser.Text;
             string pass = this.txtPass.Text;
-            MyGlobal jumpinfo = new MyGlobal();
             if (this.rdoStudent.Checked)
             {
                 //学生登录后查询学生信息且有学生权限 
@@ -62,26 +56,16 @@ namespace frmWin
                 SqlCommand sql = new SqlCommand(sqlquery, conn);
                 SqlDataReader reader = sql.ExecuteReader();
                 reader.Read();
-                string userName = reader[0].ToString();
+                userid = reader[0].ToString();
                 if (reader.HasRows == true) 
                 {
-                    MessageBox.Show("欢迎学生"+ userName + "登录");
+                    MessageBox.Show("欢迎学生"+userid+"登录");
                     jumpinfo.user = "student";
-                    jumpinfo.stuid = getstuId();
-                }
-                this.Hide();
-                if (FrmMain.sign == false)
-                {
+                    jumpinfo.stuId = getstuId();
+                    this.Hide();
                     FrmMain f = new FrmMain(jumpinfo);
                     //f.MdiParent = this;
-                    FrmMain.sign = true;
                     f.Show();
-
-                }
-                else
-                {
-                    MessageBox.Show("该窗体已经存在~");
-                    return;
                 }
 
             }
@@ -100,26 +84,16 @@ namespace frmWin
                 {
                     MessageBox.Show("欢迎教师" + userid + "登录");
                     jumpinfo.user = "teacher";
-                    jumpinfo.stuid = getteacherId();
-                }
-
-                this.Hide();
-                if (FrmMain.sign == false)
-                {
+                    jumpinfo.teachId = getteachId();
+                    this.Hide();
+                    this.Hide();
                     FrmMain f = new FrmMain(jumpinfo);
                     //f.MdiParent = this;
-                    FrmMain.sign = true;
                     f.Show();
+                }
 
-                }
-                else
-                {
-                    MessageBox.Show("该窗体已经存在~");
-                    return;
-                }
 
             }
-
         }
 
         private void btnExit_Click(object sender, EventArgs e)

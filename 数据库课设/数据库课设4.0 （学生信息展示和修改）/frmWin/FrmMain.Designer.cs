@@ -39,7 +39,6 @@
             this.添加班级ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.班级信息查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.学生管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.学生宿舍查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.学生档案查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.学生档案录入ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.学生转宿ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -130,14 +129,14 @@
             // 添加班级ToolStripMenuItem
             // 
             this.添加班级ToolStripMenuItem.Name = "添加班级ToolStripMenuItem";
-            this.添加班级ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.添加班级ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.添加班级ToolStripMenuItem.Text = "添加班级";
             this.添加班级ToolStripMenuItem.Click += new System.EventHandler(this.添加班级ToolStripMenuItem_Click);
             // 
             // 班级信息查询ToolStripMenuItem
             // 
             this.班级信息查询ToolStripMenuItem.Name = "班级信息查询ToolStripMenuItem";
-            this.班级信息查询ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.班级信息查询ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.班级信息查询ToolStripMenuItem.Text = "班级信息查询";
             this.班级信息查询ToolStripMenuItem.Click += new System.EventHandler(this.班级信息查询ToolStripMenuItem_Click);
             // 
@@ -145,19 +144,12 @@
             // 
             this.学生管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.学生档案查询ToolStripMenuItem,
-            this.学生宿舍查询ToolStripMenuItem,
             this.学生档案录入ToolStripMenuItem,
             this.学生转宿ToolStripMenuItem,
             this.学生班级分配ToolStripMenuItem});
             this.学生管理ToolStripMenuItem.Name = "学生管理ToolStripMenuItem";
             this.学生管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
             this.学生管理ToolStripMenuItem.Text = "学生管理";
-            // 
-            // 学生宿舍查询ToolStripMenuItem
-            // 
-            this.学生宿舍查询ToolStripMenuItem.Name = "学生宿舍查询ToolStripMenuItem";
-            this.学生宿舍查询ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.学生宿舍查询ToolStripMenuItem.Text = "学生宿舍查询";
             // 
             // 学生档案查询ToolStripMenuItem
             // 
@@ -197,13 +189,13 @@
             // 教师档案查询ToolStripMenuItem
             // 
             this.教师档案查询ToolStripMenuItem.Name = "教师档案查询ToolStripMenuItem";
-            this.教师档案查询ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.教师档案查询ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.教师档案查询ToolStripMenuItem.Text = "教师档案查询";
             // 
             // 教师档案录入ToolStripMenuItem
             // 
             this.教师档案录入ToolStripMenuItem.Name = "教师档案录入ToolStripMenuItem";
-            this.教师档案录入ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.教师档案录入ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.教师档案录入ToolStripMenuItem.Text = "教师档案录入";
             // 
             // 收费管理ToolStripMenuItem
@@ -218,13 +210,13 @@
             // 费用查询ToolStripMenuItem
             // 
             this.费用查询ToolStripMenuItem.Name = "费用查询ToolStripMenuItem";
-            this.费用查询ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.费用查询ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.费用查询ToolStripMenuItem.Text = "费用查询";
             // 
             // 收费统计ToolStripMenuItem
             // 
             this.收费统计ToolStripMenuItem.Name = "收费统计ToolStripMenuItem";
-            this.收费统计ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.收费统计ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.收费统计ToolStripMenuItem.Text = "收费统计";
             // 
             // 帮助ToolStripMenuItem
@@ -275,7 +267,6 @@
         private System.Windows.Forms.ToolStripMenuItem 学生管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 学生档案录入ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 学生档案查询ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 学生宿舍查询ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 学生转宿ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 教师管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 教师档案录入ToolStripMenuItem;
