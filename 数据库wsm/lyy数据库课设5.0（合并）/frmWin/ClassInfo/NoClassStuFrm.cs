@@ -85,8 +85,6 @@ namespace frmWin.ClassInfo
             SqlCommand mycom = new SqlCommand(myinsert, conn);               //定义OleDbCommnad对象并连接数据库 
             mycom.ExecuteNonQuery();
             conn.Close();
-            MessageBox.Show("学生已成功分配到班级" + ClassType.Text);
-            this.Close();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
