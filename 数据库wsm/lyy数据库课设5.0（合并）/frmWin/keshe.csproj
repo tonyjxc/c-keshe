@@ -195,6 +195,12 @@
     <Compile Include="fun\SingleWindow.cs" />
     <Compile Include="fun\User.cs" />
     <Compile Include="fun\Validation.cs" />
+    <Compile Include="Student\AddStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\AddStudent.Designer.cs">
+      <DependentUpon>AddStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Student\ChangeStuInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -312,6 +318,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Student\AddStudent.resx">
+      <DependentUpon>AddStudent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Student\ChangeStuInfo.resx">
       <DependentUpon>ChangeStuInfo.cs</DependentUpon>
     </EmbeddedResource>

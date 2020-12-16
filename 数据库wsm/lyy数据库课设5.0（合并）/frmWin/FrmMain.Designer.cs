@@ -112,10 +112,7 @@
             // 
             // 教师信息查询校长ToolStripMenuItem
             // 
-            this.教师信息查询校长ToolStripMenuItem.Name = "教师信息查询校长ToolStripMenuItem";
-            this.教师信息查询校长ToolStripMenuItem.Size = new System.Drawing.Size(290, 34);
-            this.教师信息查询校长ToolStripMenuItem.Text = "教师信息查询（校长）";
-            this.教师信息查询校长ToolStripMenuItem.Click += new System.EventHandler(this.教师信息查询校长ToolStripMenuItem_Click);
+7
             // 
             // 宿舍管理ToolStripMenuItem
             // 

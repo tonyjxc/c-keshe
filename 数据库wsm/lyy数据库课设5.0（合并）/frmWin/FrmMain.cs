@@ -1,8 +1,6 @@
 ﻿using frmWin.building;
 using frmWin.ClassInfo;
 using frmWin.dorm;
-using frmWin.chargeType;
-using frmWin.charge;
 using frmWin.dormType;
 using frmWin.fun;
 using frmWin.Student;
@@ -44,6 +42,8 @@ namespace frmWin
 
         }
 
+
+        //没有变名字，我在外面改成了"楼宇"
         private buildingManagerFrm2 buildingman;
         private void 楼层管理ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -58,6 +58,7 @@ namespace frmWin
             buildingman.Show();
         }
 
+        private dormTypeManageFrm2 dormtype;
         private void 宿舍类型ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dormtype == null || dormtype.IsDisposed)
@@ -73,21 +74,21 @@ namespace frmWin
 
         private void 宿舍管理ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
-        private dormTypeManageFrm2 dormtype;
+        private dormManageFrm2 dorm;
         private void 详细管理ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (dormtype == null || dormtype.IsDisposed)
+            if (dorm == null || dorm.IsDisposed)
             {
-                dormtype = new dormTypeManageFrm2(jumpinfo);
+                dorm = new dormManageFrm2(jumpinfo);
             }
-            Size OldSize = dormtype.Size;
+            Size OldSize = dorm.Size;
             this.Size = new Size(OldSize.Width + 20, OldSize.Height + 70);
-            dormtype.MdiParent = this;
-            dormtype.Location = new Point(0, 0); ;
-            dormtype.Show();
+            dorm.MdiParent = this;
+            dorm.Location = new Point(0, 0); ;
+            dorm.Show();
         }
 
         private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
@@ -208,58 +209,6 @@ namespace frmWin
             FrmLogin2 start = new FrmLogin2();
             start.Show();
             this.Hide();
-        }
-
-        private void 教师信息查询校长ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (teacher.Form2.sign == false)
-            {
-                MessageBox.Show("132");
-                teacher.Form2 f = new teacher.Form2(jumpinfo);
-                //f.MdiParent = this;
-                teacher.Form2.sign = true;
-                f.Show();
-
-            }
-            else
-            {
-                MessageBox.Show("该窗体已经存在~");
-                return;
-            }
-        }
-
-        private void 收费管理ToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            if (charge.Form2.sign == false)
-            {
-                charge.Form2 f = new charge.Form2(jumpinfo);
-                //f.MdiParent = this;
-                charge.Form2.sign = true;
-                f.Show();
-
-            }
-            else
-            {
-                MessageBox.Show("该窗体已经存在~");
-                return;
-            }
-        }
-
-        private void 种类管理ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (chargeType.Form2.sign == false)
-            {
-                chargeType.Form2 f = new chargeType.Form2(jumpinfo);
-                //f.MdiParent = this;
-                chargeType.Form2.sign = true;
-                f.Show();
-
-            }
-            else
-            {
-                MessageBox.Show("该窗体已经存在~");
-                return;
-            }
         }
     }
 }

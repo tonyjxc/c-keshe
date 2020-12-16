@@ -1,6 +1,6 @@
-﻿namespace frmWin.ClassInfo
+﻿namespace frmWin.Student
 {
-    partial class AddClass
+    partial class AddStudent
     {
         /// <summary>
         /// Required designer variable.
@@ -30,6 +30,7 @@
         {
             this.btnExit = new System.Windows.Forms.Button();
             this.txtMemo = new System.Windows.Forms.TextBox();
+            this.classname = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -38,25 +39,23 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.teacher = new System.Windows.Forms.ComboBox();
+            this.ClassType = new System.Windows.Forms.ComboBox();
             this.MoveTime = new System.Windows.Forms.DateTimePicker();
             this.CreateTime = new System.Windows.Forms.DateTimePicker();
-            this.label8 = new System.Windows.Forms.Label();
-            this.classname = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnExit
             // 
             this.btnExit.Font = new System.Drawing.Font("宋体", 12F);
-            this.btnExit.Location = new System.Drawing.Point(416, 262);
+            this.btnExit.Location = new System.Drawing.Point(433, 254);
             this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(59, 26);
-            this.btnExit.TabIndex = 5;
+            this.btnExit.TabIndex = 8;
             this.btnExit.Text = "取消";
             this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // txtMemo
             // 
@@ -66,6 +65,15 @@
             this.txtMemo.Name = "txtMemo";
             this.txtMemo.Size = new System.Drawing.Size(140, 26);
             this.txtMemo.TabIndex = 10;
+            // 
+            // classname
+            // 
+            this.classname.Font = new System.Drawing.Font("宋体", 12F);
+            this.classname.Location = new System.Drawing.Point(332, 23);
+            this.classname.Margin = new System.Windows.Forms.Padding(2);
+            this.classname.Name = "classname";
+            this.classname.Size = new System.Drawing.Size(140, 26);
+            this.classname.TabIndex = 8;
             // 
             // label6
             // 
@@ -87,7 +95,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 16);
             this.label5.TabIndex = 4;
-            this.label5.Text = "班级名称";
+            this.label5.Text = "学生名称";
             // 
             // label4
             // 
@@ -109,7 +117,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 16);
             this.label3.TabIndex = 2;
-            this.label3.Text = "负责老师";
+            this.label3.Text = "所在班级";
             // 
             // label2
             // 
@@ -131,26 +139,26 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 16);
             this.label1.TabIndex = 0;
-            this.label1.Text = "班级编号";
+            this.label1.Text = "学生学号";
             // 
             // btnSubmit
             // 
             this.btnSubmit.Font = new System.Drawing.Font("宋体", 12F);
-            this.btnSubmit.Location = new System.Drawing.Point(311, 262);
+            this.btnSubmit.Location = new System.Drawing.Point(328, 254);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(59, 26);
-            this.btnSubmit.TabIndex = 4;
+            this.btnSubmit.TabIndex = 7;
             this.btnSubmit.Text = "添加";
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.teacher);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.ClassType);
             this.groupBox1.Controls.Add(this.MoveTime);
             this.groupBox1.Controls.Add(this.CreateTime);
-            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtMemo);
             this.groupBox1.Controls.Add(this.classname);
             this.groupBox1.Controls.Add(this.label6);
@@ -160,22 +168,22 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("宋体", 12F);
-            this.groupBox1.Location = new System.Drawing.Point(35, 63);
+            this.groupBox1.Location = new System.Drawing.Point(52, 55);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(480, 179);
-            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "所有信息";
             // 
-            // teacher
+            // ClassType
             // 
-            this.teacher.FormattingEnabled = true;
-            this.teacher.Location = new System.Drawing.Point(93, 111);
-            this.teacher.Name = "teacher";
-            this.teacher.Size = new System.Drawing.Size(140, 24);
-            this.teacher.TabIndex = 16;
+            this.ClassType.FormattingEnabled = true;
+            this.ClassType.Location = new System.Drawing.Point(93, 111);
+            this.ClassType.Name = "ClassType";
+            this.ClassType.Size = new System.Drawing.Size(140, 24);
+            this.ClassType.TabIndex = 16;
             // 
             // MoveTime
             // 
@@ -192,37 +200,27 @@
             this.CreateTime.TabIndex = 6;
             this.CreateTime.Value = new System.DateTime(2020, 11, 15, 19, 55, 0, 0);
             // 
-            // label8
+            // label7
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("宋体", 12F);
-            this.label8.Location = new System.Drawing.Point(97, 31);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(72, 16);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "默认产生";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("宋体", 12F);
+            this.label7.Location = new System.Drawing.Point(113, 30);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(64, 16);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "default";
             // 
-            // classname
-            // 
-            this.classname.Font = new System.Drawing.Font("宋体", 12F);
-            this.classname.Location = new System.Drawing.Point(332, 23);
-            this.classname.Margin = new System.Windows.Forms.Padding(2);
-            this.classname.Name = "classname";
-            this.classname.Size = new System.Drawing.Size(140, 26);
-            this.classname.TabIndex = 8;
-            // 
-            // AddClass
+            // AddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 304);
+            this.ClientSize = new System.Drawing.Size(612, 315);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.groupBox1);
-            this.Name = "AddClass";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "添加班级";
+            this.Name = "AddStudent";
+            this.Text = "AddStudent";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -233,6 +231,7 @@
 
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.TextBox txtMemo;
+        private System.Windows.Forms.TextBox classname;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -241,10 +240,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox ClassType;
         private System.Windows.Forms.DateTimePicker MoveTime;
         private System.Windows.Forms.DateTimePicker CreateTime;
-        private System.Windows.Forms.ComboBox teacher;
-        private System.Windows.Forms.TextBox classname;
     }
 }
