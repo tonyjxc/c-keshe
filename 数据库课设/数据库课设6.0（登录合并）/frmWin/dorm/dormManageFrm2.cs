@@ -29,7 +29,7 @@ namespace frmWin.dorm
             InitializeComponent();
             LoadDormName();
             LoadBuildName();
-            LoadDormInfo();
+            LoadDormInfoFirst();
         }
         public void LoadDormName()
         {
@@ -65,6 +65,22 @@ namespace frmWin.dorm
             reader.Close();
             conn.Close();
         }
+        public void LoadDormInfoFirst()
+        {
+            dgvDorm.DataSource = null;
+            string DormName = txtDormName.Text;
+            string BuildName = txtBuildName.Text;
+            SqlConnection conn = new SqlConnection("server=" + MyGlobal.ip + ";database=dormitory;UID=sa;PWD=zyh@197068;Integrated Security=False");
+            conn.Open();
+            //定义查询的sql语句  select buildName,dormNum,personCount from dorm,building where buildId=fk_buildid
+            string sqlquery = @"select distinct buildName,dormNum,personCount,flag from dorm,building where buildId=fk_buildid";
+            SqlDataAdapter data = new SqlDataAdapter(sqlquery, conn);
+            DataSet dt = new DataSet();
+            data.Fill(dt, "table1");
+            DataTable datatable = dt.Tables["table1"];
+            dgvDorm.DataSource = datatable;
+            conn.Close();
+        }
         public void LoadDormInfo()
         {
             dgvDorm.DataSource = null;
@@ -81,7 +97,6 @@ namespace frmWin.dorm
             dgvDorm.DataSource = datatable;
             conn.Close();
         }
-
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             string DormName = txtDormName.Text;
@@ -184,6 +199,29 @@ namespace frmWin.dorm
                 MessageBox.Show("该窗体已经存在~");
                 return;
             }
+        }
+
+        private void dormManageFrm2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFindStu_Click(object sender, EventArgs e)
+        {
+            string stuName = txtStuName.Text;
+            SqlConnection conn = new SqlConnection("server=" + MyGlobal.ip + ";database=dormitory;UID=sa;PWD=zyh@197068;Integrated Security=False");
+            conn.Open();
+            //select stuName,buildName,dormNum,personCount,flag from (dorm left join building on dorm.fk_buildid=buildId)
+            //left join student on student.fk_dormId=dormId
+            //where stuName like '王%'
+            //%stuName%
+            string sqlquery = @"select stuName,buildName,dormNum,personCount,flag from (dorm left join building on dorm.fk_buildid=buildId)left join student on student.fk_dormId=dormId where stuName like '%" + stuName+"%'";
+            SqlDataAdapter data = new SqlDataAdapter(sqlquery, conn);
+            DataSet dt = new DataSet();
+            data.Fill(dt, "table1");
+            DataTable datatable = dt.Tables["table1"];
+            dgvDorm.DataSource = datatable;
+            conn.Close();
         }
     }
 }

@@ -58,6 +58,7 @@ namespace frmWin
             buildingman.Show();
         }
 
+        private dormTypeManageFrm2 dormtype;
         private void 宿舍类型ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (dormtype == null || dormtype.IsDisposed)
@@ -76,18 +77,18 @@ namespace frmWin
             
         }
 
-        private dormTypeManageFrm2 dormtype;
+        private dormManageFrm2 mydorm;
         private void 详细管理ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (dormtype == null || dormtype.IsDisposed)
+            if (mydorm == null || mydorm.IsDisposed)
             {
-                dormtype = new dormTypeManageFrm2(jumpinfo);
+                mydorm = new dormManageFrm2(jumpinfo);
             }
-            Size OldSize = dormtype.Size;
+            Size OldSize = mydorm.Size;
             this.Size = new Size(OldSize.Width + 20, OldSize.Height + 70);
-            dormtype.MdiParent = this;
-            dormtype.Location = new Point(0, 0); ;
-            dormtype.Show();
+            mydorm.MdiParent = this;
+            mydorm.Location = new Point(0, 0); 
+            mydorm.Show();
         }
 
         private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)

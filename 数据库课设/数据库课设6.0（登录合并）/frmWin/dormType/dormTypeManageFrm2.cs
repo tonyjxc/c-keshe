@@ -27,7 +27,7 @@ namespace frmWin.dormType
             }
             InitializeComponent();
             LoadTypeName();
-            LoadTypeInfo();
+            LoadTypeInfoFirst();
         }
         public void LoadTypeName()
         {
@@ -44,7 +44,7 @@ namespace frmWin.dormType
             reader.Close();
             conn.Close();
         }
-        public void LoadTypeInfo()
+        public void LoadTypeInfoFirst()
         {
             dgvDormType.DataSource = null;
             string dormtypename = cboDormTypeName.Text;
@@ -53,7 +53,7 @@ namespace frmWin.dormType
             conn.Open();
             //定义查询的sql语句  select typeName,personCount,price,sex,memo from dormtype where typeName='四人间（男）'
             //select typeName,personCount,price,sex,memo from dormtype where typeName='"+dormtypename+"'";
-            string sqlquery = @"select typeName,personCount,price,sex,memo from dormtype where typeName='" + dormtypename + "'"; 
+            string sqlquery = @"select typeName,personCount,price,sex,memo from dormtype "; 
             SqlDataAdapter data = new SqlDataAdapter(sqlquery, conn);
             DataSet dt = new DataSet();
             data.Fill(dt, "table1");
@@ -61,7 +61,23 @@ namespace frmWin.dormType
             dgvDormType.DataSource = datatable;
             conn.Close();
         }
+        public void LoadTypeInfo()
+        {
+            dgvDormType.DataSource = null;
+            string dormtypename = cboDormTypeName.Text;
 
+            SqlConnection conn = new SqlConnection("server=" + MyGlobal.ip + ";database=dormitory;UID=sa;PWD=zyh@197068;Integrated Security=False");
+            conn.Open();
+            //定义查询的sql语句  select typeName,personCount,price,sex,memo from dormtype where typeName='四人间（男）'
+            //select typeName,personCount,price,sex,memo from dormtype where typeName='"+dormtypename+"'";
+            string sqlquery = @"select typeName,personCount,price,sex,memo from dormtype where typeName='" + dormtypename + "'";
+            SqlDataAdapter data = new SqlDataAdapter(sqlquery, conn);
+            DataSet dt = new DataSet();
+            data.Fill(dt, "table1");
+            DataTable datatable = dt.Tables["table1"];
+            dgvDormType.DataSource = datatable;
+            conn.Close();
+        }
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();

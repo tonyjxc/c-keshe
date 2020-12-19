@@ -31,10 +31,6 @@
             this.btnFind = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.dgvDorm = new System.Windows.Forms.DataGridView();
-            this.buildName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dormNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.personCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.flag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,16 +38,24 @@
             this.txtDormName = new System.Windows.Forms.ComboBox();
             this.btnInsert = new System.Windows.Forms.Button();
             this.btnview = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtStuName = new System.Windows.Forms.TextBox();
+            this.btnFindStu = new System.Windows.Forms.Button();
+            this.stuName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buildName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dormNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.personCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.flag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDorm)).BeginInit();
             this.SuspendLayout();
             // 
             // btnFind
             // 
-            this.btnFind.Location = new System.Drawing.Point(391, 78);
+            this.btnFind.Location = new System.Drawing.Point(410, 74);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(81, 38);
             this.btnFind.TabIndex = 47;
-            this.btnFind.Text = "查询";
+            this.btnFind.Text = "查询2";
             this.btnFind.UseVisualStyleBackColor = true;
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
@@ -69,6 +73,7 @@
             // 
             this.dgvDorm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDorm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.stuName,
             this.buildName,
             this.dormNum,
             this.personCount,
@@ -77,45 +82,13 @@
             this.dgvDorm.Name = "dgvDorm";
             this.dgvDorm.RowHeadersWidth = 51;
             this.dgvDorm.RowTemplate.Height = 27;
-            this.dgvDorm.Size = new System.Drawing.Size(639, 224);
+            this.dgvDorm.Size = new System.Drawing.Size(716, 224);
             this.dgvDorm.TabIndex = 41;
-            // 
-            // buildName
-            // 
-            this.buildName.DataPropertyName = "buildName";
-            this.buildName.HeaderText = "楼号";
-            this.buildName.MinimumWidth = 6;
-            this.buildName.Name = "buildName";
-            this.buildName.Width = 125;
-            // 
-            // dormNum
-            // 
-            this.dormNum.DataPropertyName = "dormNum";
-            this.dormNum.HeaderText = "宿舍号";
-            this.dormNum.MinimumWidth = 6;
-            this.dormNum.Name = "dormNum";
-            this.dormNum.Width = 125;
-            // 
-            // personCount
-            // 
-            this.personCount.DataPropertyName = "personCount";
-            this.personCount.HeaderText = "宿舍人数";
-            this.personCount.MinimumWidth = 6;
-            this.personCount.Name = "personCount";
-            this.personCount.Width = 125;
-            // 
-            // flag
-            // 
-            this.flag.DataPropertyName = "flag";
-            this.flag.HeaderText = "状态";
-            this.flag.MinimumWidth = 6;
-            this.flag.Name = "flag";
-            this.flag.Width = 125;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(206, 91);
+            this.label1.Location = new System.Drawing.Point(206, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 15);
             this.label1.TabIndex = 37;
@@ -151,7 +124,7 @@
             // txtDormName
             // 
             this.txtDormName.FormattingEnabled = true;
-            this.txtDormName.Location = new System.Drawing.Point(264, 87);
+            this.txtDormName.Location = new System.Drawing.Point(264, 83);
             this.txtDormName.Name = "txtDormName";
             this.txtDormName.Size = new System.Drawing.Size(121, 23);
             this.txtDormName.TabIndex = 52;
@@ -168,7 +141,7 @@
             // 
             // btnview
             // 
-            this.btnview.Location = new System.Drawing.Point(497, 79);
+            this.btnview.Location = new System.Drawing.Point(507, 74);
             this.btnview.Name = "btnview";
             this.btnview.Size = new System.Drawing.Size(160, 42);
             this.btnview.TabIndex = 54;
@@ -176,11 +149,80 @@
             this.btnview.UseVisualStyleBackColor = true;
             this.btnview.Click += new System.EventHandler(this.btnview_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(28, 34);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(127, 15);
+            this.label2.TabIndex = 55;
+            this.label2.Text = "查询学生所在宿舍";
+            // 
+            // txtStuName
+            // 
+            this.txtStuName.Location = new System.Drawing.Point(161, 24);
+            this.txtStuName.Name = "txtStuName";
+            this.txtStuName.Size = new System.Drawing.Size(158, 25);
+            this.txtStuName.TabIndex = 56;
+            // 
+            // btnFindStu
+            // 
+            this.btnFindStu.Location = new System.Drawing.Point(375, 15);
+            this.btnFindStu.Name = "btnFindStu";
+            this.btnFindStu.Size = new System.Drawing.Size(81, 38);
+            this.btnFindStu.TabIndex = 57;
+            this.btnFindStu.Text = "查询1";
+            this.btnFindStu.UseVisualStyleBackColor = true;
+            this.btnFindStu.Click += new System.EventHandler(this.btnFindStu_Click);
+            // 
+            // stuName
+            // 
+            this.stuName.DataPropertyName = "stuName";
+            this.stuName.HeaderText = "学生姓名";
+            this.stuName.MinimumWidth = 6;
+            this.stuName.Name = "stuName";
+            this.stuName.Width = 125;
+            // 
+            // buildName
+            // 
+            this.buildName.DataPropertyName = "buildName";
+            this.buildName.HeaderText = "楼号";
+            this.buildName.MinimumWidth = 6;
+            this.buildName.Name = "buildName";
+            this.buildName.Width = 125;
+            // 
+            // dormNum
+            // 
+            this.dormNum.DataPropertyName = "dormNum";
+            this.dormNum.HeaderText = "宿舍号";
+            this.dormNum.MinimumWidth = 6;
+            this.dormNum.Name = "dormNum";
+            this.dormNum.Width = 125;
+            // 
+            // personCount
+            // 
+            this.personCount.DataPropertyName = "personCount";
+            this.personCount.HeaderText = "宿舍人数";
+            this.personCount.MinimumWidth = 6;
+            this.personCount.Name = "personCount";
+            this.personCount.Width = 125;
+            // 
+            // flag
+            // 
+            this.flag.DataPropertyName = "flag";
+            this.flag.HeaderText = "状态";
+            this.flag.MinimumWidth = 6;
+            this.flag.Name = "flag";
+            this.flag.Width = 125;
+            // 
             // dormManageFrm2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(704, 474);
+            this.ClientSize = new System.Drawing.Size(850, 474);
+            this.Controls.Add(this.btnFindStu);
+            this.Controls.Add(this.txtStuName);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnview);
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.txtDormName);
@@ -195,6 +237,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "dormManageFrm2";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.dormManageFrm2_FormClosing);
+            this.Load += new System.EventHandler(this.dormManageFrm2_Load);
             this.MdiChildActivate += new System.EventHandler(this.dormManageFrm2_MdiChildActivate);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDorm)).EndInit();
             this.ResumeLayout(false);
@@ -212,11 +255,15 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox txtBuildName;
         private System.Windows.Forms.ComboBox txtDormName;
+        private System.Windows.Forms.Button btnInsert;
+        private System.Windows.Forms.Button btnview;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stuName;
         private System.Windows.Forms.DataGridViewTextBoxColumn buildName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dormNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn personCount;
         private System.Windows.Forms.DataGridViewTextBoxColumn flag;
-        private System.Windows.Forms.Button btnInsert;
-        private System.Windows.Forms.Button btnview;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtStuName;
+        private System.Windows.Forms.Button btnFindStu;
     }
 }

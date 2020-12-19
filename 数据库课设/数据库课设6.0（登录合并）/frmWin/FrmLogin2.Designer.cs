@@ -80,6 +80,7 @@
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(227, 25);
             this.txtPass.TabIndex = 14;
+            this.txtPass.Text = "0000";
             // 
             // txtUser
             // 
@@ -88,6 +89,7 @@
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(227, 25);
             this.txtUser.TabIndex = 13;
+            this.txtUser.Text = "20191";
             // 
             // btnExit
             // 

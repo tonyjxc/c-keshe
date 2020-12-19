@@ -28,7 +28,7 @@ namespace frmWin.building
             }
             InitializeComponent();
             LoadDormName();
-            LoadDormInfo();
+            LoadDormInfoFirst();
         }
 
         public void LoadDormName() 
@@ -50,14 +50,31 @@ namespace frmWin.building
 
         }
 
-        public void LoadDormInfo() 
+        public void LoadDormInfoFirst() 
         {
             dgvbuilding.DataSource = null;
             this.buildingname = txtDromName.Text;
             SqlConnection conn = new SqlConnection("server=" + MyGlobal.ip + ";database=dormitory;UID=sa;PWD=zyh@197068;Integrated Security=False");
             conn.Open();
             //定义查询的sql语句
-            string sqlquery = @"select * from building where buildName = '" +this.buildingname+"'";
+            //@"select * from building where buildName = '" +this.buildingname+"'";
+            string sqlquery = @"select * from building ";
+            SqlDataAdapter data = new SqlDataAdapter(sqlquery, conn);
+            DataSet dt = new DataSet();
+            data.Fill(dt, "table1");
+            DataTable datatable = dt.Tables["table1"];
+            dgvbuilding.DataSource = datatable;
+            conn.Close();
+        }
+        public void LoadDormInfo()
+        {
+            dgvbuilding.DataSource = null;
+            this.buildingname = txtDromName.Text;
+            SqlConnection conn = new SqlConnection("server=" + MyGlobal.ip + ";database=dormitory;UID=sa;PWD=zyh@197068;Integrated Security=False");
+            conn.Open();
+            //定义查询的sql语句
+            //@"select * from building where buildName = '" +this.buildingname+"'";
+            string sqlquery = @"select * from building where buildName = '" + this.buildingname + "'";
             SqlDataAdapter data = new SqlDataAdapter(sqlquery, conn);
             DataSet dt = new DataSet();
             data.Fill(dt, "table1");
