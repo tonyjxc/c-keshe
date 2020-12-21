@@ -94,10 +94,5 @@ namespace frmWin.dormType
             MessageBox.Show(txtTypeName + "删除成功");
             conn.Close();
         }
-
-        private void dormTypeUpdateFrm2_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

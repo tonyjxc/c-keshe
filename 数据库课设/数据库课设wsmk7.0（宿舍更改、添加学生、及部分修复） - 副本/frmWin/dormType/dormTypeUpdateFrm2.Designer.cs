@@ -190,7 +190,6 @@
             this.Controls.Add(this.label2);
             this.Name = "dormTypeUpdateFrm2";
             this.Text = "dormTypeUpdateFrm2";
-            this.Load += new System.EventHandler(this.dormTypeUpdateFrm2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
