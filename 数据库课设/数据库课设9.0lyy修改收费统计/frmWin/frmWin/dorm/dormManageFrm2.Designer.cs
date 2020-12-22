@@ -31,6 +31,11 @@
             this.btnFind = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.dgvDorm = new System.Windows.Forms.DataGridView();
+            this.stuName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buildName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dormNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.personCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.flag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,11 +46,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtStuName = new System.Windows.Forms.TextBox();
             this.btnFindStu = new System.Windows.Forms.Button();
-            this.stuName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buildName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dormNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.personCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.flag = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnChange = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDorm)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,6 +86,46 @@
             this.dgvDorm.RowTemplate.Height = 27;
             this.dgvDorm.Size = new System.Drawing.Size(716, 224);
             this.dgvDorm.TabIndex = 41;
+            // 
+            // stuName
+            // 
+            this.stuName.DataPropertyName = "stuName";
+            this.stuName.HeaderText = "学生姓名";
+            this.stuName.MinimumWidth = 6;
+            this.stuName.Name = "stuName";
+            this.stuName.Width = 125;
+            // 
+            // buildName
+            // 
+            this.buildName.DataPropertyName = "buildName";
+            this.buildName.HeaderText = "楼号";
+            this.buildName.MinimumWidth = 6;
+            this.buildName.Name = "buildName";
+            this.buildName.Width = 125;
+            // 
+            // dormNum
+            // 
+            this.dormNum.DataPropertyName = "dormNum";
+            this.dormNum.HeaderText = "宿舍号";
+            this.dormNum.MinimumWidth = 6;
+            this.dormNum.Name = "dormNum";
+            this.dormNum.Width = 125;
+            // 
+            // personCount
+            // 
+            this.personCount.DataPropertyName = "personCount";
+            this.personCount.HeaderText = "宿舍人数";
+            this.personCount.MinimumWidth = 6;
+            this.personCount.Name = "personCount";
+            this.personCount.Width = 125;
+            // 
+            // flag
+            // 
+            this.flag.DataPropertyName = "flag";
+            this.flag.HeaderText = "状态";
+            this.flag.MinimumWidth = 6;
+            this.flag.Name = "flag";
+            this.flag.Width = 125;
             // 
             // label1
             // 
@@ -167,7 +209,7 @@
             // 
             // btnFindStu
             // 
-            this.btnFindStu.Location = new System.Drawing.Point(375, 15);
+            this.btnFindStu.Location = new System.Drawing.Point(335, 11);
             this.btnFindStu.Name = "btnFindStu";
             this.btnFindStu.Size = new System.Drawing.Size(81, 38);
             this.btnFindStu.TabIndex = 57;
@@ -175,51 +217,32 @@
             this.btnFindStu.UseVisualStyleBackColor = true;
             this.btnFindStu.Click += new System.EventHandler(this.btnFindStu_Click);
             // 
-            // stuName
+            // btnChange
             // 
-            this.stuName.DataPropertyName = "stuName";
-            this.stuName.HeaderText = "学生姓名";
-            this.stuName.MinimumWidth = 6;
-            this.stuName.Name = "stuName";
-            this.stuName.Width = 125;
+            this.btnChange.Location = new System.Drawing.Point(589, 13);
+            this.btnChange.Name = "btnChange";
+            this.btnChange.Size = new System.Drawing.Size(93, 42);
+            this.btnChange.TabIndex = 58;
+            this.btnChange.Text = "修改";
+            this.btnChange.UseVisualStyleBackColor = true;
+            this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
             // 
-            // buildName
+            // label4
             // 
-            this.buildName.DataPropertyName = "buildName";
-            this.buildName.HeaderText = "楼号";
-            this.buildName.MinimumWidth = 6;
-            this.buildName.Name = "buildName";
-            this.buildName.Width = 125;
-            // 
-            // dormNum
-            // 
-            this.dormNum.DataPropertyName = "dormNum";
-            this.dormNum.HeaderText = "宿舍号";
-            this.dormNum.MinimumWidth = 6;
-            this.dormNum.Name = "dormNum";
-            this.dormNum.Width = 125;
-            // 
-            // personCount
-            // 
-            this.personCount.DataPropertyName = "personCount";
-            this.personCount.HeaderText = "宿舍人数";
-            this.personCount.MinimumWidth = 6;
-            this.personCount.Name = "personCount";
-            this.personCount.Width = 125;
-            // 
-            // flag
-            // 
-            this.flag.DataPropertyName = "flag";
-            this.flag.HeaderText = "状态";
-            this.flag.MinimumWidth = 6;
-            this.flag.Name = "flag";
-            this.flag.Width = 125;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(431, 34);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(142, 15);
+            this.label4.TabIndex = 59;
+            this.label4.Text = "跳转寝室卫生分修改";
             // 
             // dormManageFrm2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(850, 474);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btnChange);
             this.Controls.Add(this.btnFindStu);
             this.Controls.Add(this.txtStuName);
             this.Controls.Add(this.label2);
@@ -265,5 +288,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtStuName;
         private System.Windows.Forms.Button btnFindStu;
+        private System.Windows.Forms.Button btnChange;
+        private System.Windows.Forms.Label label4;
     }
 }

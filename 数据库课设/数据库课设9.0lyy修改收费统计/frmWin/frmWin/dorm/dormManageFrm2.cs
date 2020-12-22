@@ -73,7 +73,7 @@ namespace frmWin.dorm
             SqlConnection conn = new SqlConnection("server=" + MyGlobal.ip + ";database=dormitory;UID=sa;PWD=zyh@197068;Integrated Security=False");
             conn.Open();
             //定义查询的sql语句  select buildName,dormNum,personCount from dorm,building where buildId=fk_buildid
-            string sqlquery = @"select distinct buildName,dormNum,personCount,flag from dorm,building where buildId=fk_buildid";
+            string sqlquery = @"select distinct buildName,dormNum,personCount,flag1 from dorm,building where buildId=fk_buildid";
             SqlDataAdapter data = new SqlDataAdapter(sqlquery, conn);
             DataSet dt = new DataSet();
             data.Fill(dt, "table1");
@@ -222,6 +222,22 @@ namespace frmWin.dorm
             DataTable datatable = dt.Tables["table1"];
             dgvDorm.DataSource = datatable;
             conn.Close();
+        }
+
+        private void btnChange_Click(object sender, EventArgs e)
+        {
+            if (dormCredit.sign == false)
+            {
+                dormCredit f = new dormCredit();
+                dormCredit.sign = true;
+                f.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("该窗体已经存在~");
+                return;
+            }
         }
     }
 }

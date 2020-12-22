@@ -152,9 +152,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(279, 158);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 15);
+            this.label4.Size = new System.Drawing.Size(52, 15);
             this.label4.TabIndex = 3;
-            this.label4.Text = "备注";
+            this.label4.Text = "卫生分";
             // 
             // label3
             // 
