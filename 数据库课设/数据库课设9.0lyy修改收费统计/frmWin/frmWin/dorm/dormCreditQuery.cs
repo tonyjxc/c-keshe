@@ -32,6 +32,17 @@ namespace frmWin.dorm
             data.Fill(dt, "table1");
             DataTable datatable = dt.Tables["table1"];
             dgvDormCredit.DataSource = datatable;
+
+            SqlCommand sql = new SqlCommand("select name from classinfo ", conn);
+            SqlDataReader reader = sql.ExecuteReader();
+            while (reader.Read())
+            {
+                this.cmbClass.Items.Add(reader[0].ToString());
+            }
+            cmbClass.SelectedIndex = 0;
+            //设置id值属性和文本属性
+            reader.Close();
+            
             conn.Close();
         }
 
@@ -71,6 +82,39 @@ namespace frmWin.dorm
             DataTable datatable = dt.Tables["table1"];
             dgvDormCredit.DataSource = datatable;
             conn.Close();
+        }
+
+        private void btnavgclss_Click(object sender, EventArgs e)
+        {
+            string classname = cmbClass.Text;
+            //select name,avg(dorm.memo) from dorm, student, classinfo where fk_dormId = dormId and classId = fk_classId and classId=1 group by name
+            SqlConnection conn = new SqlConnection("server=" + MyGlobal.ip + ";database=dormitory;UID=sa;PWD=zyh@197068;Integrated Security=False");
+            conn.Open();
+            string sqlquery = @"select name,avg(dorm.memo) from dorm, student, classinfo where fk_dormId = dormId and classId = fk_classId and name='"+classname+"' group by name";
+            SqlCommand sql = new SqlCommand(sqlquery, conn);
+            SqlDataReader reader = sql.ExecuteReader();
+            reader.Read();
+            txtclass.Text = reader[1].ToString();
+            reader.Close();
+
+        }
+
+        private void btnavgall_Click(object sender, EventArgs e)
+        {
+            //select avg(dorm.memo) from dorm
+            SqlConnection conn = new SqlConnection("server=" + MyGlobal.ip + ";database=dormitory;UID=sa;PWD=zyh@197068;Integrated Security=False");
+            conn.Open();
+            string sqlquery = @"select avg(dorm.memo) from dorm";
+            SqlCommand sql = new SqlCommand(sqlquery, conn);
+            SqlDataReader reader = sql.ExecuteReader();
+            reader.Read();
+            txtall.Text = reader[0].ToString();
+            reader.Close();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

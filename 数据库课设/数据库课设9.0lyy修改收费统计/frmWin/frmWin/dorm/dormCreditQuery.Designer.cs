@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.dgvDormCredit = new System.Windows.Forms.DataGridView();
+            this.buildName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dormNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dormCredit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.classname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.txtclass = new System.Windows.Forms.TextBox();
             this.btnclass = new System.Windows.Forms.Button();
@@ -38,11 +43,9 @@
             this.btnavgall = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtall = new System.Windows.Forms.TextBox();
-            this.buildName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dormNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dormCredit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.classname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmbClass = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDormCredit)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,85 +65,6 @@
             this.dgvDormCredit.RowTemplate.Height = 27;
             this.dgvDormCredit.Size = new System.Drawing.Size(831, 274);
             this.dgvDormCredit.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(774, 433);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 15);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "注：1为警告";
-            // 
-            // txtclass
-            // 
-            this.txtclass.Location = new System.Drawing.Point(142, 469);
-            this.txtclass.Name = "txtclass";
-            this.txtclass.Size = new System.Drawing.Size(141, 25);
-            this.txtclass.TabIndex = 2;
-            // 
-            // btnclass
-            // 
-            this.btnclass.Location = new System.Drawing.Point(279, 52);
-            this.btnclass.Name = "btnclass";
-            this.btnclass.Size = new System.Drawing.Size(198, 56);
-            this.btnclass.TabIndex = 3;
-            this.btnclass.Text = "按照班级查询卫生";
-            this.btnclass.UseVisualStyleBackColor = true;
-            this.btnclass.Click += new System.EventHandler(this.btnclass_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 472);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 15);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "分数显示";
-            // 
-            // btncredit
-            // 
-            this.btncredit.Location = new System.Drawing.Point(41, 52);
-            this.btncredit.Name = "btncredit";
-            this.btncredit.Size = new System.Drawing.Size(198, 56);
-            this.btncredit.TabIndex = 5;
-            this.btncredit.Text = "按照分数查询卫生";
-            this.btncredit.UseVisualStyleBackColor = true;
-            this.btncredit.Click += new System.EventHandler(this.btncredit_Click);
-            // 
-            // btnavgclss
-            // 
-            this.btnavgclss.Location = new System.Drawing.Point(333, 451);
-            this.btnavgclss.Name = "btnavgclss";
-            this.btnavgclss.Size = new System.Drawing.Size(170, 56);
-            this.btnavgclss.TabIndex = 6;
-            this.btnavgclss.Text = "统计班级卫生平均分";
-            this.btnavgclss.UseVisualStyleBackColor = true;
-            // 
-            // btnavgall
-            // 
-            this.btnavgall.Location = new System.Drawing.Point(333, 513);
-            this.btnavgall.Name = "btnavgall";
-            this.btnavgall.Size = new System.Drawing.Size(170, 56);
-            this.btnavgall.TabIndex = 7;
-            this.btnavgall.Text = "统计整体卫生平均分";
-            this.btnavgall.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(47, 534);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 15);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "分数显示";
-            // 
-            // txtall
-            // 
-            this.txtall.Location = new System.Drawing.Point(142, 531);
-            this.txtall.Name = "txtall";
-            this.txtall.Size = new System.Drawing.Size(141, 25);
-            this.txtall.TabIndex = 8;
             // 
             // buildName
             // 
@@ -182,11 +106,122 @@
             this.Column4.Name = "Column4";
             this.Column4.Width = 125;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(774, 433);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(90, 15);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "注：1为警告";
+            // 
+            // txtclass
+            // 
+            this.txtclass.Location = new System.Drawing.Point(187, 467);
+            this.txtclass.Name = "txtclass";
+            this.txtclass.Size = new System.Drawing.Size(131, 25);
+            this.txtclass.TabIndex = 2;
+            // 
+            // btnclass
+            // 
+            this.btnclass.Location = new System.Drawing.Point(279, 52);
+            this.btnclass.Name = "btnclass";
+            this.btnclass.Size = new System.Drawing.Size(198, 56);
+            this.btnclass.TabIndex = 3;
+            this.btnclass.Text = "按照班级查询卫生";
+            this.btnclass.UseVisualStyleBackColor = true;
+            this.btnclass.Click += new System.EventHandler(this.btnclass_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(196, 432);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 15);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "分数显示";
+            // 
+            // btncredit
+            // 
+            this.btncredit.Location = new System.Drawing.Point(41, 52);
+            this.btncredit.Name = "btncredit";
+            this.btncredit.Size = new System.Drawing.Size(198, 56);
+            this.btncredit.TabIndex = 5;
+            this.btncredit.Text = "按照分数查询卫生";
+            this.btncredit.UseVisualStyleBackColor = true;
+            this.btncredit.Click += new System.EventHandler(this.btncredit_Click);
+            // 
+            // btnavgclss
+            // 
+            this.btnavgclss.Location = new System.Drawing.Point(333, 449);
+            this.btnavgclss.Name = "btnavgclss";
+            this.btnavgclss.Size = new System.Drawing.Size(170, 56);
+            this.btnavgclss.TabIndex = 6;
+            this.btnavgclss.Text = "统计班级卫生平均分";
+            this.btnavgclss.UseVisualStyleBackColor = true;
+            this.btnavgclss.Click += new System.EventHandler(this.btnavgclss_Click);
+            // 
+            // btnavgall
+            // 
+            this.btnavgall.Location = new System.Drawing.Point(333, 513);
+            this.btnavgall.Name = "btnavgall";
+            this.btnavgall.Size = new System.Drawing.Size(170, 56);
+            this.btnavgall.TabIndex = 7;
+            this.btnavgall.Text = "统计整体卫生平均分";
+            this.btnavgall.UseVisualStyleBackColor = true;
+            this.btnavgall.Click += new System.EventHandler(this.btnavgall_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(60, 541);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(97, 15);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "整体分数显示";
+            // 
+            // txtall
+            // 
+            this.txtall.Location = new System.Drawing.Point(187, 531);
+            this.txtall.Name = "txtall";
+            this.txtall.Size = new System.Drawing.Size(131, 25);
+            this.txtall.TabIndex = 8;
+            // 
+            // cmbClass
+            // 
+            this.cmbClass.FormattingEnabled = true;
+            this.cmbClass.Location = new System.Drawing.Point(36, 469);
+            this.cmbClass.Name = "cmbClass";
+            this.cmbClass.Size = new System.Drawing.Size(121, 23);
+            this.cmbClass.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(33, 432);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 15);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "所查班级";
+            // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(748, 531);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(116, 39);
+            this.btnExit.TabIndex = 12;
+            this.btnExit.Text = "退出";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // dormCreditQuery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 651);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.cmbClass);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtall);
             this.Controls.Add(this.btnavgall);
@@ -223,5 +258,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dormCredit;
         private System.Windows.Forms.DataGridViewTextBoxColumn classname;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.ComboBox cmbClass;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnExit;
     }
 }

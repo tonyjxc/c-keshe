@@ -31,7 +31,8 @@ namespace frmWin.dorm
             LoadBuildName();
             LoadDormInfoFirst();
             UpdateInfo();
-            
+            Updateflag2();
+
         }
         public void LoadDormName()
         {
@@ -288,6 +289,48 @@ namespace frmWin.dorm
             conn.Close();
         }
 
+        public void Updateflag2()
+        {
+            int credit = 0;
+            int myflag = 0;
+            int dormid = 0;
+            //select dormId,memo,flag2 from dorm
+            SqlConnection conn = new SqlConnection("server=" + MyGlobal.ip + ";database=dormitory;UID=sa;PWD=zyh@197068;Integrated Security=False");
+            conn.Open();
+            string sqlquery = @"select dormId,memo,flag2 from dorm";
+            SqlDataAdapter data = new SqlDataAdapter(sqlquery, conn);
+            DataSet dt = new DataSet();
+            data.Fill(dt, "table1");
+            DataTable datatable = dt.Tables["table1"];
+            int rowCount = datatable.Rows.Count;
+            
+            for (int i = 0; i < rowCount; i++)
+            {
+                credit = (int)datatable.Rows[i].ItemArray[1];
+                
+                if (credit<18)
+                {
+                    myflag = 1;
+                    dormid = (int)datatable.Rows[i].ItemArray[0];
+                    //update dorm set flag2=1 where dormId=1
+                    string sqlquery1 = @"update dorm set flag2=1 where dormId="+dormid+"";
+                    SqlCommand mycom1 = new SqlCommand(sqlquery1, conn);
+                    mycom1.ExecuteNonQuery();
+                    //MessageBox.Show("卫生分小于18的警告成功");
+                }
+                else
+                {
+                    myflag = 0;
+                    dormid = (int)datatable.Rows[i].ItemArray[0];
+                    //update dorm set flag2=1 where dormId=1
+                    string sqlquery1 = @"update dorm set flag2=0 where dormId=" + dormid + "";
+                    SqlCommand mycom1 = new SqlCommand(sqlquery1, conn);
+                    mycom1.ExecuteNonQuery();
+                    //MessageBox.Show("卫生分大于18的修改为0成功");
+                }
+            }
+
+        }
         private void btnCreditquery_Click(object sender, EventArgs e)
         {
             if (dormCreditQuery.sign == false)

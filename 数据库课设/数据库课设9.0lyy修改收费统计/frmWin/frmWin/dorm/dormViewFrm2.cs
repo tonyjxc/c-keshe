@@ -39,7 +39,7 @@ namespace frmWin.dorm
             //from(dorm left join building on fk_buildid = 2)  left join dormtype on typeId = 4
             //where dormNum = 613 and buildName='宿舍楼2'
             //"select distinct dormID,dormNum,typeName,buildName,dorm.personCount,flag,dorm.memo from(dorm left join building on fk_buildid = '" + ChangebuildidName + ")  left join dormtype on typeId = '" + ChangetypeidName + "' where dormNum  = '" + ChangedormName + "' and buildName = '" + ChangebuildName + "'";
-            string myinsert = @"select distinct dormID,dormNum,typeName,buildName,dorm.personCount,flag,dorm.memo from(dorm left join building on fk_buildid = '" + ChangebuildidName + "')  left join dormtype on typeId = '" + ChangetypeidName + "' where dormNum  = '" + ChangedormName + "' and buildName = '" + ChangebuildName + "'";
+            string myinsert = @"select distinct dormID,dormNum,typeName,buildName,dorm.personCount,flag1,dorm.memo from(dorm left join building on fk_buildid = '" + ChangebuildidName + "')  left join dormtype on typeId = '" + ChangetypeidName + "' where dormNum  = '" + ChangedormName + "' and buildName = '" + ChangebuildName + "'";
             SqlCommand sql = new SqlCommand(myinsert, conn);
             SqlDataReader reader = sql.ExecuteReader();
             reader.Read();
