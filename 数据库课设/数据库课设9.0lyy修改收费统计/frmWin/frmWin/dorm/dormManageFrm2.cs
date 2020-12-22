@@ -30,6 +30,8 @@ namespace frmWin.dorm
             LoadDormName();
             LoadBuildName();
             LoadDormInfoFirst();
+            UpdateInfo();
+            
         }
         public void LoadDormName()
         {
@@ -230,6 +232,69 @@ namespace frmWin.dorm
             {
                 dormCredit f = new dormCredit();
                 dormCredit.sign = true;
+                f.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("该窗体已经存在~");
+                return;
+            }
+        }
+        public void UpdateInfo()
+        {
+            
+            //每次进入这个界面都会实时更新宿舍信息
+            int dormid = 0;
+            int value1 = 0;
+            string value2 = "";
+            SqlConnection conn = new SqlConnection("server=" + MyGlobal.ip + ";database=dormitory;UID=sa;PWD=zyh@197068;Integrated Security=False");
+            conn.Open();
+            string sqlquery = @"select dormId,personCount,flag1 from dorm";
+            SqlDataAdapter data = new SqlDataAdapter(sqlquery, conn);
+            DataSet dt = new DataSet();
+            data.Fill(dt, "table1");
+            DataTable datatable = dt.Tables["table1"];
+            int rowCount = datatable.Rows.Count;
+            for (int i = 0; i < rowCount; i++)
+            {
+                value1 = (int)datatable.Rows[i].ItemArray[1];//personcount
+                value2 = (string)datatable.Rows[i].ItemArray[2];//是否可入住的信息
+                //MessageBox.Show(value2);
+                if (value1 < 4&& value2=="不可入住")
+                {
+                    dormid = (int)datatable.Rows[i].ItemArray[0];
+                    //update dorm set flag1='可入住' where dormId=5
+                    string sqlquery1 = @"update dorm set flag1='可入住' where dormId="+dormid+"";
+                    SqlCommand mycom1 = new SqlCommand(sqlquery1, conn);
+                    mycom1.ExecuteNonQuery();
+                    //MessageBox.Show("人数小于4的更新成功");
+                }
+                else if(value1 >= 4 && value2 == "可入住")
+                {
+                    dormid = (int)datatable.Rows[i].ItemArray[0];
+                    //update dorm set flag1='可入住' where dormId=5
+                    string sqlquery1 = @"update dorm set flag1='不可入住' where dormId=" + dormid + "";
+                    SqlCommand mycom1 = new SqlCommand(sqlquery1, conn);
+                    mycom1.ExecuteNonQuery();
+                    //MessageBox.Show("人数大于4的更新成功");
+                }
+            }
+            
+            
+            //int value = (int)datatable.Rows[0].ItemArray[1];
+            //string output = value.ToString();
+            //MessageBox.Show(output);
+            conn.Close();
+        }
+
+        private void btnCreditquery_Click(object sender, EventArgs e)
+        {
+            if (dormCreditQuery.sign == false)
+            {
+                dormCreditQuery f = new dormCreditQuery();
+                //f.MdiParent = this;
+                dormCreditQuery.sign = true;
                 f.Show();
 
             }

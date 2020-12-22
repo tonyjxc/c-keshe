@@ -48,12 +48,14 @@
             this.btnFindStu = new System.Windows.Forms.Button();
             this.btnChange = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnCreditquery = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDorm)).BeginInit();
             this.SuspendLayout();
             // 
             // btnFind
             // 
-            this.btnFind.Location = new System.Drawing.Point(410, 74);
+            this.btnFind.Location = new System.Drawing.Point(417, 131);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(81, 38);
             this.btnFind.TabIndex = 47;
@@ -63,7 +65,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(576, 377);
+            this.btnExit.Location = new System.Drawing.Point(583, 434);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(91, 50);
             this.btnExit.TabIndex = 45;
@@ -80,7 +82,7 @@
             this.dormNum,
             this.personCount,
             this.flag});
-            this.dgvDorm.Location = new System.Drawing.Point(28, 127);
+            this.dgvDorm.Location = new System.Drawing.Point(35, 184);
             this.dgvDorm.Name = "dgvDorm";
             this.dgvDorm.RowHeadersWidth = 51;
             this.dgvDorm.RowTemplate.Height = 27;
@@ -130,7 +132,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(206, 86);
+            this.label1.Location = new System.Drawing.Point(213, 143);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 15);
             this.label1.TabIndex = 37;
@@ -138,7 +140,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(443, 377);
+            this.btnUpdate.Location = new System.Drawing.Point(450, 434);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(90, 50);
             this.btnUpdate.TabIndex = 48;
@@ -149,7 +151,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 87);
+            this.label3.Location = new System.Drawing.Point(32, 144);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 15);
             this.label3.TabIndex = 49;
@@ -158,7 +160,7 @@
             // txtBuildName
             // 
             this.txtBuildName.FormattingEnabled = true;
-            this.txtBuildName.Location = new System.Drawing.Point(83, 83);
+            this.txtBuildName.Location = new System.Drawing.Point(90, 140);
             this.txtBuildName.Name = "txtBuildName";
             this.txtBuildName.Size = new System.Drawing.Size(107, 23);
             this.txtBuildName.TabIndex = 51;
@@ -166,14 +168,14 @@
             // txtDormName
             // 
             this.txtDormName.FormattingEnabled = true;
-            this.txtDormName.Location = new System.Drawing.Point(264, 83);
+            this.txtDormName.Location = new System.Drawing.Point(271, 140);
             this.txtDormName.Name = "txtDormName";
             this.txtDormName.Size = new System.Drawing.Size(121, 23);
             this.txtDormName.TabIndex = 52;
             // 
             // btnInsert
             // 
-            this.btnInsert.Location = new System.Drawing.Point(28, 377);
+            this.btnInsert.Location = new System.Drawing.Point(35, 434);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(113, 50);
             this.btnInsert.TabIndex = 53;
@@ -183,7 +185,7 @@
             // 
             // btnview
             // 
-            this.btnview.Location = new System.Drawing.Point(507, 74);
+            this.btnview.Location = new System.Drawing.Point(514, 131);
             this.btnview.Name = "btnview";
             this.btnview.Size = new System.Drawing.Size(160, 42);
             this.btnview.TabIndex = 54;
@@ -194,7 +196,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 34);
+            this.label2.Location = new System.Drawing.Point(36, 92);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(127, 15);
             this.label2.TabIndex = 55;
@@ -202,14 +204,14 @@
             // 
             // txtStuName
             // 
-            this.txtStuName.Location = new System.Drawing.Point(161, 24);
+            this.txtStuName.Location = new System.Drawing.Point(169, 82);
             this.txtStuName.Name = "txtStuName";
             this.txtStuName.Size = new System.Drawing.Size(158, 25);
             this.txtStuName.TabIndex = 56;
             // 
             // btnFindStu
             // 
-            this.btnFindStu.Location = new System.Drawing.Point(335, 11);
+            this.btnFindStu.Location = new System.Drawing.Point(343, 69);
             this.btnFindStu.Name = "btnFindStu";
             this.btnFindStu.Size = new System.Drawing.Size(81, 38);
             this.btnFindStu.TabIndex = 57;
@@ -219,28 +221,39 @@
             // 
             // btnChange
             // 
-            this.btnChange.Location = new System.Drawing.Point(589, 13);
+            this.btnChange.Location = new System.Drawing.Point(110, 12);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(93, 42);
             this.btnChange.TabIndex = 58;
-            this.btnChange.Text = "修改";
+            this.btnChange.Text = "登记";
             this.btnChange.UseVisualStyleBackColor = true;
             this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(431, 34);
+            this.label4.Location = new System.Drawing.Point(32, 26);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(142, 15);
+            this.label4.Size = new System.Drawing.Size(67, 15);
             this.label4.TabIndex = 59;
-            this.label4.Text = "跳转寝室卫生分修改";
+            this.label4.Text = "寝室卫生";
+            // 
+            // btnCreditquery
+            // 
+            this.btnCreditquery.Location = new System.Drawing.Point(230, 12);
+            this.btnCreditquery.Name = "btnCreditquery";
+            this.btnCreditquery.Size = new System.Drawing.Size(93, 42);
+            this.btnCreditquery.TabIndex = 60;
+            this.btnCreditquery.Text = "卫生查询";
+            this.btnCreditquery.UseVisualStyleBackColor = true;
+            this.btnCreditquery.Click += new System.EventHandler(this.btnCreditquery_Click);
             // 
             // dormManageFrm2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(850, 474);
+            this.ClientSize = new System.Drawing.Size(788, 544);
+            this.Controls.Add(this.btnCreditquery);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnChange);
             this.Controls.Add(this.btnFindStu);
@@ -290,5 +303,7 @@
         private System.Windows.Forms.Button btnFindStu;
         private System.Windows.Forms.Button btnChange;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnCreditquery;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

@@ -173,6 +173,12 @@
     <Compile Include="dorm\dormCredit.Designer.cs">
       <DependentUpon>dormCredit.cs</DependentUpon>
     </Compile>
+    <Compile Include="dorm\dormCreditQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dorm\dormCreditQuery.Designer.cs">
+      <DependentUpon>dormCreditQuery.cs</DependentUpon>
+    </Compile>
     <Compile Include="dorm\dormInsertFrm2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -337,6 +343,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="dorm\dormCredit.resx">
       <DependentUpon>dormCredit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dorm\dormCreditQuery.resx">
+      <DependentUpon>dormCreditQuery.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dorm\dormInsertFrm2.resx">
       <DependentUpon>dormInsertFrm2.cs</DependentUpon>
