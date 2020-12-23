@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.dgvDormCredit = new System.Windows.Forms.DataGridView();
-            this.buildName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dormNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dormCredit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.classname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.txtclass = new System.Windows.Forms.TextBox();
             this.btnclass = new System.Windows.Forms.Button();
@@ -47,6 +42,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnmess = new System.Windows.Forms.Button();
+            this.buildName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dormNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dormCredit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.classname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDormCredit)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,46 +66,6 @@
             this.dgvDormCredit.RowTemplate.Height = 27;
             this.dgvDormCredit.Size = new System.Drawing.Size(831, 274);
             this.dgvDormCredit.TabIndex = 0;
-            // 
-            // buildName
-            // 
-            this.buildName.DataPropertyName = "fk_buildid";
-            this.buildName.HeaderText = "楼号";
-            this.buildName.MinimumWidth = 6;
-            this.buildName.Name = "buildName";
-            this.buildName.Width = 125;
-            // 
-            // dormNum
-            // 
-            this.dormNum.DataPropertyName = "dormNum";
-            this.dormNum.HeaderText = "寝室号";
-            this.dormNum.MinimumWidth = 6;
-            this.dormNum.Name = "dormNum";
-            this.dormNum.Width = 125;
-            // 
-            // dormCredit
-            // 
-            this.dormCredit.DataPropertyName = "memo";
-            this.dormCredit.HeaderText = "卫生分";
-            this.dormCredit.MinimumWidth = 6;
-            this.dormCredit.Name = "dormCredit";
-            this.dormCredit.Width = 125;
-            // 
-            // classname
-            // 
-            this.classname.DataPropertyName = "name";
-            this.classname.HeaderText = "班级";
-            this.classname.MinimumWidth = 6;
-            this.classname.Name = "classname";
-            this.classname.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "flag2";
-            this.Column4.HeaderText = "是否警告";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
             // 
             // label1
             // 
@@ -225,6 +185,46 @@
             this.btnmess.UseVisualStyleBackColor = true;
             this.btnmess.Click += new System.EventHandler(this.btnmess_Click);
             // 
+            // buildName
+            // 
+            this.buildName.DataPropertyName = "fk_buildid";
+            this.buildName.HeaderText = "楼号";
+            this.buildName.MinimumWidth = 6;
+            this.buildName.Name = "buildName";
+            this.buildName.Width = 125;
+            // 
+            // dormNum
+            // 
+            this.dormNum.DataPropertyName = "dormNum";
+            this.dormNum.HeaderText = "寝室号";
+            this.dormNum.MinimumWidth = 6;
+            this.dormNum.Name = "dormNum";
+            this.dormNum.Width = 125;
+            // 
+            // dormCredit
+            // 
+            this.dormCredit.DataPropertyName = "dorm_grade";
+            this.dormCredit.HeaderText = "卫生分";
+            this.dormCredit.MinimumWidth = 6;
+            this.dormCredit.Name = "dormCredit";
+            this.dormCredit.Width = 125;
+            // 
+            // classname
+            // 
+            this.classname.DataPropertyName = "name";
+            this.classname.HeaderText = "班级";
+            this.classname.MinimumWidth = 6;
+            this.classname.Name = "classname";
+            this.classname.Width = 125;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "warnflag";
+            this.Column4.HeaderText = "是否警告";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 125;
+            // 
             // dormCreditQuery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -265,14 +265,14 @@
         private System.Windows.Forms.Button btnavgall;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtall;
+        private System.Windows.Forms.ComboBox cmbClass;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnmess;
         private System.Windows.Forms.DataGridViewTextBoxColumn buildName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dormNum;
         private System.Windows.Forms.DataGridViewTextBoxColumn dormCredit;
         private System.Windows.Forms.DataGridViewTextBoxColumn classname;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.ComboBox cmbClass;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnmess;
     }
 }

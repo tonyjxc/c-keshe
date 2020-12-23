@@ -94,9 +94,9 @@ namespace frmWin.dorm
 
         private void btnSinglesubmit_Click(object sender, EventArgs e)
         {
-            string buildName = txtSinglebuild.Text;
-            string dormName = txtSingledorm.Text;
-            string credit = txtSinglecredit.Text;
+            string buildName = this.txtSinglebuild.Text;
+            string dormName = this.txtSingledorm.Text;
+            string credit = this.txtSinglecredit.Text;
             SqlConnection conn = new SqlConnection("server=" + MyGlobal.ip + ";database=dormitory;UID=sa;PWD=zyh@197068;Integrated Security=False");
             conn.Open();
             //select buildid from building where buildName='宿舍楼1'
@@ -117,18 +117,18 @@ namespace frmWin.dorm
 
         private void btnBatchsubmit_Click(object sender, EventArgs e)
         {
-            string buildName1 = txtBatchbuild1.Text;
-            string buildName2 = txtBatchbuild2.Text;
-            string buildName3 = txtBatchbuild3.Text;
-            string buildName4 = txtBatchbuild4.Text;
-            string dormName1 = txtBatchdorm1.Text;
-            string dormName2 = txtBatchdorm2.Text;
-            string dormName3 = txtBatchdorm3.Text;
-            string dormName4 = txtBatchdorm4.Text;
-            string credit1 = txtBatchcredit1.Text;
-            string credit2 = txtBatchcredit2.Text;
-            string credit3 = txtBatchcredit3.Text;
-            string credit4 = txtBatchcredit4.Text;
+            string buildName1 = this.txtBatchbuild1.Text;
+            string buildName2 = this.txtBatchbuild2.Text;
+            string buildName3 = this.txtBatchbuild3.Text;
+            string buildName4 = this.txtBatchbuild4.Text;
+            string dormName1 = this.txtBatchdorm1.Text;
+            string dormName2 = this.txtBatchdorm2.Text;
+            string dormName3 = this.txtBatchdorm3.Text;
+            string dormName4 = this.txtBatchdorm4.Text;
+            string credit1 = this.txtBatchcredit1.Text;
+            string credit2 = this.txtBatchcredit2.Text;
+            string credit3 = this.txtBatchcredit3.Text;
+            string credit4 = this.txtBatchcredit4.Text;
 
 
             SqlConnection conn = new SqlConnection("server=" + MyGlobal.ip + ";database=dormitory;UID=sa;PWD=zyh@197068;Integrated Security=False");

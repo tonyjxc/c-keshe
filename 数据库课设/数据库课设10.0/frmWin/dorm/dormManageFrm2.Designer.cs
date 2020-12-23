@@ -31,6 +31,11 @@
             this.btnFind = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.dgvDorm = new System.Windows.Forms.DataGridView();
+            this.stuName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buildName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dormNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.personCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.flag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,11 +50,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnCreditquery = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.stuName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buildName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dormNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.personCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.flag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDorm)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,6 +88,46 @@
             this.dgvDorm.RowTemplate.Height = 27;
             this.dgvDorm.Size = new System.Drawing.Size(782, 224);
             this.dgvDorm.TabIndex = 41;
+            // 
+            // stuName
+            // 
+            this.stuName.DataPropertyName = "stuName";
+            this.stuName.HeaderText = "学生姓名";
+            this.stuName.MinimumWidth = 6;
+            this.stuName.Name = "stuName";
+            this.stuName.Width = 125;
+            // 
+            // buildName
+            // 
+            this.buildName.DataPropertyName = "buildName";
+            this.buildName.HeaderText = "楼号";
+            this.buildName.MinimumWidth = 6;
+            this.buildName.Name = "buildName";
+            this.buildName.Width = 125;
+            // 
+            // dormNum
+            // 
+            this.dormNum.DataPropertyName = "dormNum";
+            this.dormNum.HeaderText = "宿舍号";
+            this.dormNum.MinimumWidth = 6;
+            this.dormNum.Name = "dormNum";
+            this.dormNum.Width = 125;
+            // 
+            // personCount
+            // 
+            this.personCount.DataPropertyName = "personCount";
+            this.personCount.HeaderText = "宿舍人数";
+            this.personCount.MinimumWidth = 6;
+            this.personCount.Name = "personCount";
+            this.personCount.Width = 125;
+            // 
+            // flag
+            // 
+            this.flag.DataPropertyName = "liveflag";
+            this.flag.HeaderText = "状态";
+            this.flag.MinimumWidth = 6;
+            this.flag.Name = "flag";
+            this.flag.Width = 125;
             // 
             // label1
             // 
@@ -208,51 +248,11 @@
             this.btnCreditquery.UseVisualStyleBackColor = true;
             this.btnCreditquery.Click += new System.EventHandler(this.btnCreditquery_Click);
             // 
-            // stuName
-            // 
-            this.stuName.DataPropertyName = "stuName";
-            this.stuName.HeaderText = "学生姓名";
-            this.stuName.MinimumWidth = 6;
-            this.stuName.Name = "stuName";
-            this.stuName.Width = 125;
-            // 
-            // buildName
-            // 
-            this.buildName.DataPropertyName = "buildName";
-            this.buildName.HeaderText = "楼号";
-            this.buildName.MinimumWidth = 6;
-            this.buildName.Name = "buildName";
-            this.buildName.Width = 125;
-            // 
-            // dormNum
-            // 
-            this.dormNum.DataPropertyName = "dormNum";
-            this.dormNum.HeaderText = "宿舍号";
-            this.dormNum.MinimumWidth = 6;
-            this.dormNum.Name = "dormNum";
-            this.dormNum.Width = 125;
-            // 
-            // personCount
-            // 
-            this.personCount.DataPropertyName = "personCount";
-            this.personCount.HeaderText = "宿舍人数";
-            this.personCount.MinimumWidth = 6;
-            this.personCount.Name = "personCount";
-            this.personCount.Width = 125;
-            // 
-            // flag
-            // 
-            this.flag.DataPropertyName = "liveflag";
-            this.flag.HeaderText = "状态";
-            this.flag.MinimumWidth = 6;
-            this.flag.Name = "flag";
-            this.flag.Width = 125;
-            // 
             // dormManageFrm2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(858, 560);
+            this.ClientSize = new System.Drawing.Size(858, 533);
             this.Controls.Add(this.btnCreditquery);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnChange);

@@ -95,13 +95,18 @@ namespace frmWin.dorm
             string BuildName = txtBuildName.Text;
             SqlConnection conn = new SqlConnection("server=" + MyGlobal.ip + ";database=dormitory;UID=sa;PWD=zyh@197068;Integrated Security=False");
             conn.Open();
-            //定义查询的sql语句  select buildName,dormNum,personCount from dorm,building where buildNum ='" + DormName + "' and dormNum='"+BuildName+" '";
-            string sqlquery = @"select buildName,dormNum,personCount,liveflag from dorm,building where dormNum ='" + DormName + "' and buildName='" + BuildName + "'";
+            //select buildName,dormNum,personCount from dorm,building where buildid=fk_buildid and dormNum='609' and buildName='宿舍楼3'
+            //select buildName,dormNum,personCount from dorm,building where buildid=fk_buildid and dormNum='" + DormName + "' and buildName='" + BuildName + "'";
+            string sqlquery = @"select buildName,dormNum,personCount from dorm,building where buildid=fk_buildid and dormNum='" + DormName + "' and buildName='" + BuildName + "'";
             SqlDataAdapter data = new SqlDataAdapter(sqlquery, conn);
             DataSet dt = new DataSet();
             data.Fill(dt, "table1");
             DataTable datatable = dt.Tables["table1"];
             dgvDorm.DataSource = datatable;
+            if(datatable.Rows.Count==0)
+            {
+                MessageBox.Show("不存在这样的宿舍哦！");
+            }
             conn.Close();
         }
         private void btnUpdate_Click(object sender, EventArgs e)

@@ -9,6 +9,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//发送邮件
+using System.Net;
+using System.Net.Mail;
 
 namespace frmWin.dorm
 {
@@ -124,6 +127,55 @@ namespace frmWin.dorm
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnmess_Click(object sender, EventArgs e)
+        {
+            
+            SqlConnection conn = new SqlConnection("server=" + MyGlobal.ip + ";database=dormitory;UID=sa;PWD=zyh@197068;Integrated Security=False");
+            conn.Open();
+            //dormNum from dorm where dorm_grade<18
+            string sqlquery = @"select dormNum from dorm where dorm_grade<18";
+            SqlDataAdapter data = new SqlDataAdapter(sqlquery, conn);
+            DataSet dt = new DataSet();
+            data.Fill(dt, "table1");
+            DataTable datatable = dt.Tables["table1"];
+            int n = datatable.Rows.Count;
+            string[] dormNumArray = new string[n];
+
+            //MessageBox.Show("有" + n + "个人不及格");
+            for(int i = 0; i < n; i++)
+            {
+                dormNumArray[i] = datatable.Rows[i][0].ToString();
+            }
+            /*
+            for (int j = 0; j < n; j++)
+            {
+                MessageBox.Show(dormNumArray[j]);
+            }*/
+            conn.Close();
+            string text = "";
+            for (int i = 0; i < n; i++)
+            {
+                text += "\n"+dormNumArray[i];
+            }
+            MessageBox.Show(text);
+            MessageBox.Show("发送成功");
+            
+
+            using (MailMessage mailMessige = new MailMessage())
+            using (SmtpClient smtpClient = new SmtpClient(/*smtp服务器*/"smtp.qq.com"))
+            {
+                mailMessige.To.Add(/*收件人地址*/"1281032638@qq.com");
+                mailMessige.Body =/*内容*/"寝室卫生警告:" + text;
+                mailMessige.From = new MailAddress(/*发送的地址*/"1607617252@qq.com");
+                
+                mailMessige.Subject = /*邮件标题*/"寝室卫生警告";
+                smtpClient.Credentials = new NetworkCredential("1607617252@qq.com", "fpujkqwrijzihicj");
+                smtpClient.Send(mailMessige);
+            }
+            
+            
         }
     }
 }

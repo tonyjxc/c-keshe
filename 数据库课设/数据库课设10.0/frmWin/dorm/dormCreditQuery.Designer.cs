@@ -46,6 +46,7 @@
             this.cmbClass = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnmess = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDormCredit)).BeginInit();
             this.SuspendLayout();
             // 
@@ -214,11 +215,22 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // btnmess
+            // 
+            this.btnmess.Location = new System.Drawing.Point(502, 52);
+            this.btnmess.Name = "btnmess";
+            this.btnmess.Size = new System.Drawing.Size(135, 56);
+            this.btnmess.TabIndex = 13;
+            this.btnmess.Text = "通知辅导员";
+            this.btnmess.UseVisualStyleBackColor = true;
+            this.btnmess.Click += new System.EventHandler(this.btnmess_Click);
+            // 
             // dormCreditQuery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 651);
+            this.Controls.Add(this.btnmess);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cmbClass);
@@ -261,5 +273,6 @@
         private System.Windows.Forms.ComboBox cmbClass;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnmess;
     }
 }
