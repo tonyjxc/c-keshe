@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{21A0C526-5D68-464F-8648-1B77B40F1A43}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>frmWin</RootNamespace>
+    <AssemblyName>frmWin</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\教学视频的课件\68397c7f6d12518a1febc35d0d27e629\链接数据库的准备工作\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="building\building.cs" />
+    <Compile Include="building\buildingInsertFrm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="building\buildingInsertFrm2.Designer.cs">
+      <DependentUpon>buildingInsertFrm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="building\buildingManagerFrm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="building\buildingManagerFrm2.Designer.cs">
+      <DependentUpon>buildingManagerFrm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="building\buildingUpdateFrm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="building\buildingUpdateFrm2.Designer.cs">
+      <DependentUpon>buildingUpdateFrm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="building\buildingWSM.cs" />
+    <Compile Include="chargeType\Class1.cs" />
+    <Compile Include="chargeType\Class2.cs" />
+    <Compile Include="chargeType\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chargeType\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="chargeType\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chargeType\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="chargeType\Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chargeType\Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="chargeType\Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chargeType\Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="charge\Class1.cs" />
+    <Compile Include="charge\Class2.cs" />
+    <Compile Include="charge\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="charge\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="charge\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="charge\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="charge\Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="charge\Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="charge\Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="charge\Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="charge\Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="charge\Form5.Designer.cs">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="charge\Form6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="charge\Form6.Designer.cs">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="charge\Form7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="charge\Form7.Designer.cs">
+      <DependentUpon>Form7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassInfo\AddClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassInfo\AddClass.Designer.cs">
+      <DependentUpon>AddClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassInfo\FrmClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassInfo\FrmClass.Designer.cs">
+      <DependentUpon>FrmClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassInfo\NoClassStuFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassInfo\NoClassStuFrm.Designer.cs">
+      <DependentUpon>NoClassStuFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dormType\dormType.cs" />
+    <Compile Include="dormType\dormTypeInsertFrm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dormType\dormTypeInsertFrm2.Designer.cs">
+      <DependentUpon>dormTypeInsertFrm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dormType\dormTypeManageFrm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dormType\dormTypeManageFrm2.Designer.cs">
+      <DependentUpon>dormTypeManageFrm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dormType\dormTypeUpdateFrm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dormType\dormTypeUpdateFrm2.Designer.cs">
+      <DependentUpon>dormTypeUpdateFrm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dormType\dormTypeWSM.cs" />
+    <Compile Include="dorm\dorm.cs" />
+    <Compile Include="dorm\dormCredit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dorm\dormCredit.Designer.cs">
+      <DependentUpon>dormCredit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dorm\dormCreditQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dorm\dormCreditQuery.Designer.cs">
+      <DependentUpon>dormCreditQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dorm\dormInsertFrm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dorm\dormInsertFrm2.Designer.cs">
+      <DependentUpon>dormInsertFrm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dorm\dormManageFrm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dorm\dormManageFrm2.Designer.cs">
+      <DependentUpon>dormManageFrm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dorm\dormUpdateFrm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dorm\dormUpdateFrm2.Designer.cs">
+      <DependentUpon>dormUpdateFrm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dorm\dormViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dorm\dormViewForm.Designer.cs">
+      <DependentUpon>dormViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dorm\dormViewFrm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dorm\dormViewFrm2.Designer.cs">
+      <DependentUpon>dormViewFrm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dorm\dormwsm.cs" />
+    <Compile Include="FrmLogin2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin2.Designer.cs">
+      <DependentUpon>FrmLogin2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fun\dormintory.cs" />
+    <Compile Include="fun\dormType.cs" />
+    <Compile Include="fun\PageHelper.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="fun\LoginInfo.cs" />
+    <Compile Include="fun\SingleWindow.cs" />
+    <Compile Include="fun\User.cs" />
+    <Compile Include="fun\Validation.cs" />
+    <Compile Include="Student\AddStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\AddStudent.Designer.cs">
+      <DependentUpon>AddStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\ChangeStuInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\ChangeStuInfo.Designer.cs">
+      <DependentUpon>ChangeStuInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\FrmStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\FrmStudent.Designer.cs">
+      <DependentUpon>FrmStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\WhatsStuName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\WhatsStuName.Designer.cs">
+      <DependentUpon>WhatsStuName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="teacher\ChangeTeachInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="teacher\ChangeTeachInfo.Designer.cs">
+      <DependentUpon>ChangeTeachInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="teacher\Class1.cs" />
+    <Compile Include="teacher\Class2.cs" />
+    <Compile Include="teacher\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="teacher\Form1.designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="teacher\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="teacher\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="teacher\Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="teacher\Form3.designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="teacher\FrmTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="teacher\FrmTeacher.Designer.cs">
+      <DependentUpon>FrmTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="teacher\stuenterdorm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="teacher\stuenterdorm.Designer.cs">
+      <DependentUpon>stuenterdorm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="building\buildingInsertFrm2.resx">
+      <DependentUpon>buildingInsertFrm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="building\buildingManagerFrm2.resx">
+      <DependentUpon>buildingManagerFrm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="building\buildingUpdateFrm2.resx">
+      <DependentUpon>buildingUpdateFrm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chargeType\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chargeType\Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chargeType\Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chargeType\Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="charge\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="charge\Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="charge\Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="charge\Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="charge\Form5.resx">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="charge\Form6.resx">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="charge\Form7.resx">
+      <DependentUpon>Form7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassInfo\AddClass.resx">
+      <DependentUpon>AddClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassInfo\FrmClass.resx">
+      <DependentUpon>FrmClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassInfo\NoClassStuFrm.resx">
+      <DependentUpon>NoClassStuFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dormType\dormTypeInsertFrm2.resx">
+      <DependentUpon>dormTypeInsertFrm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dormType\dormTypeManageFrm2.resx">
+      <DependentUpon>dormTypeManageFrm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dormType\dormTypeUpdateFrm2.resx">
+      <DependentUpon>dormTypeUpdateFrm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dorm\dormCredit.resx">
+      <DependentUpon>dormCredit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dorm\dormCreditQuery.resx">
+      <DependentUpon>dormCreditQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dorm\dormInsertFrm2.resx">
+      <DependentUpon>dormInsertFrm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dorm\dormManageFrm2.resx">
+      <DependentUpon>dormManageFrm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dorm\dormUpdateFrm2.resx">
+      <DependentUpon>dormUpdateFrm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dorm\dormViewForm.resx">
+      <DependentUpon>dormViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dorm\dormViewFrm2.resx">
+      <DependentUpon>dormViewFrm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin2.resx">
+      <DependentUpon>FrmLogin2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Student\AddStudent.resx">
+      <DependentUpon>AddStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\ChangeStuInfo.resx">
+      <DependentUpon>ChangeStuInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\FrmStudent.resx">
+      <DependentUpon>FrmStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\WhatsStuName.resx">
+      <DependentUpon>WhatsStuName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="teacher\ChangeTeachInfo.resx">
+      <DependentUpon>ChangeTeachInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="teacher\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="teacher\Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="teacher\Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="teacher\FrmTeacher.resx">
+      <DependentUpon>FrmTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="teacher\stuenterdorm.resx">
+      <DependentUpon>stuenterdorm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

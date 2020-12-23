@@ -45,11 +45,19 @@ namespace frmWin.teacher
             string newspecialty = this.specialty.Text;
             string myinsert = "update teacher set teachUserName = '" + newnum + "',teachName='" + newname + "',sex='" + newsex + "',tel='" + newtelnum + "',hireDate='" + newcreatetime + "',specialty='" + newspecialty + "'where teachId = " + teachid;
             SqlCommand mycom = new SqlCommand(myinsert, conn);               //定义OleDbCommnad对象并连接数据库 
-            mycom.ExecuteNonQuery();
+            try
+            {
+                mycom.ExecuteNonQuery();
+            }
+            catch (Exception except)
+            {
+                MessageBox.Show(except.Message.ToString());
+            }
+
             conn.Close();
             MessageBox.Show("教师信息已更新完毕");
             this.Close();
-        }
+            }
 
         public Boolean teachnumcheck()
         {
