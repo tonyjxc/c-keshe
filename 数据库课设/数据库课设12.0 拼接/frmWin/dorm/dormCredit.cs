@@ -24,7 +24,26 @@ namespace frmWin.dorm
         {
             SqlConnection conn = new SqlConnection("server=" + MyGlobal.ip + ";database=dormitory;UID=sa;PWD=zyh@197068;Integrated Security=False");
             conn.Open();
-            string myinsert1 = @"select buildName from building";
+            SqlCommand sql2 = new SqlCommand("select buildName from building ", conn);
+            SqlDataReader reader2 = sql2.ExecuteReader();
+            while (reader2.Read())
+            {
+                this.txtSinglebuild.Items.Add(reader2[0].ToString());
+                this.txtBatchbuild1.Items.Add(reader2[0].ToString());
+                this.txtBatchbuild2.Items.Add(reader2[0].ToString());
+                this.txtBatchbuild3.Items.Add(reader2[0].ToString());
+                this.txtBatchbuild4.Items.Add(reader2[0].ToString());
+
+
+            }
+            txtBatchbuild1.SelectedIndex = 0;
+            txtBatchbuild2.SelectedIndex = 0;
+            txtBatchbuild3.SelectedIndex = 0;
+            txtBatchbuild4.SelectedIndex = 0;
+            txtSinglebuild.SelectedIndex = 0;
+            reader2.Close();
+
+            /*string myinsert1 = @"select buildName from building";
             SqlCommand sql1 = new SqlCommand(myinsert1, conn);
             SqlDataReader reader1 = sql1.ExecuteReader();
             reader1.Read();
@@ -34,18 +53,32 @@ namespace frmWin.dorm
             txtBatchbuild3.Text = reader1[0].ToString();
             txtBatchbuild4.Text = reader1[0].ToString();
             reader1.Close();
+            */
 
-            string myinsert2 = @"select dormNum from dorm";
-            SqlCommand sql2 = new SqlCommand(myinsert2, conn);
-            SqlDataReader reader2 = sql2.ExecuteReader();
-            reader2.Read();
-            txtSingledorm.Text = reader2[0].ToString();
-            txtBatchdorm1.Text= reader2[0].ToString();
-            txtBatchdorm2.Text = reader2[0].ToString();
-            txtBatchdorm3.Text = reader2[0].ToString();
-            txtBatchdorm4.Text = reader2[0].ToString();
-            reader2.Close();
 
+            SqlCommand sql = new SqlCommand("select dormNum from dorm ", conn);
+            SqlDataReader reader = sql.ExecuteReader();
+            while (reader.Read())
+            {
+                this.txtBatchdorm1.Items.Add(reader[0].ToString());
+                this.txtBatchdorm2.Items.Add(reader[0].ToString());
+                this.txtBatchdorm3.Items.Add(reader[0].ToString());
+                this.txtBatchdorm4.Items.Add(reader[0].ToString());
+                this.txtSingledorm.Items.Add(reader[0].ToString());
+                
+
+            }
+            txtBatchdorm1.SelectedIndex = 0;
+            txtBatchdorm2.SelectedIndex = 0;
+            txtBatchdorm3.SelectedIndex = 0;
+            txtBatchdorm4.SelectedIndex = 0;
+            txtSingledorm.SelectedIndex = 0;
+
+            //设置id值属性和文本属性
+            reader.Close();
+
+
+            
             string myinsert3 = @"select dorm_grade from dorm";
             SqlCommand sql3 = new SqlCommand(myinsert3, conn);
             SqlDataReader reader3 = sql3.ExecuteReader();

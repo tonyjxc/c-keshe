@@ -44,10 +44,10 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(688, 394);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnExit.Location = new System.Drawing.Point(644, 317);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(87, 50);
+            this.btnExit.Size = new System.Drawing.Size(65, 40);
             this.btnExit.TabIndex = 16;
             this.btnExit.Text = "退出";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -55,10 +55,10 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(540, 394);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUpdate.Location = new System.Drawing.Point(560, 317);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(87, 50);
+            this.btnUpdate.Size = new System.Drawing.Size(65, 40);
             this.btnUpdate.TabIndex = 15;
             this.btnUpdate.Text = "修改";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -73,12 +73,12 @@
             this.price,
             this.sex,
             this.memo});
-            this.dgvDormType.Location = new System.Drawing.Point(12, 115);
-            this.dgvDormType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvDormType.Location = new System.Drawing.Point(9, 92);
+            this.dgvDormType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvDormType.Name = "dgvDormType";
             this.dgvDormType.RowHeadersWidth = 51;
             this.dgvDormType.RowTemplate.Height = 27;
-            this.dgvDormType.Size = new System.Drawing.Size(763, 250);
+            this.dgvDormType.Size = new System.Drawing.Size(700, 200);
             this.dgvDormType.TabIndex = 12;
             // 
             // typeName
@@ -123,10 +123,10 @@
             // 
             // btnFind
             // 
-            this.btnFind.Location = new System.Drawing.Point(274, 50);
-            this.btnFind.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFind.Location = new System.Drawing.Point(206, 40);
+            this.btnFind.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(87, 39);
+            this.btnFind.Size = new System.Drawing.Size(65, 31);
             this.btnFind.TabIndex = 11;
             this.btnFind.Text = "查询";
             this.btnFind.UseVisualStyleBackColor = true;
@@ -135,33 +135,34 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 62);
+            this.label1.Location = new System.Drawing.Point(19, 50);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 15);
+            this.label1.Size = new System.Drawing.Size(53, 12);
             this.label1.TabIndex = 9;
             this.label1.Text = "类型名称";
             // 
             // cboDormTypeName
             // 
             this.cboDormTypeName.FormattingEnabled = true;
-            this.cboDormTypeName.Location = new System.Drawing.Point(98, 59);
-            this.cboDormTypeName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cboDormTypeName.Location = new System.Drawing.Point(74, 47);
+            this.cboDormTypeName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cboDormTypeName.Name = "cboDormTypeName";
-            this.cboDormTypeName.Size = new System.Drawing.Size(139, 23);
+            this.cboDormTypeName.Size = new System.Drawing.Size(105, 20);
             this.cboDormTypeName.TabIndex = 17;
             // 
             // dormTypeManageFrm2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(787, 455);
+            this.ClientSize = new System.Drawing.Size(720, 421);
             this.Controls.Add(this.cboDormTypeName);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.dgvDormType);
             this.Controls.Add(this.btnFind);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "dormTypeManageFrm2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "dormTypeManageFrm2";

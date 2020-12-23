@@ -50,12 +50,12 @@
             this.buildName,
             this.dormCount,
             this.dormFloor});
-            this.dgvbuilding.Location = new System.Drawing.Point(59, 91);
-            this.dgvbuilding.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvbuilding.Location = new System.Drawing.Point(44, 73);
+            this.dgvbuilding.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvbuilding.Name = "dgvbuilding";
             this.dgvbuilding.RowHeadersWidth = 51;
             this.dgvbuilding.RowTemplate.Height = 27;
-            this.dgvbuilding.Size = new System.Drawing.Size(688, 225);
+            this.dgvbuilding.Size = new System.Drawing.Size(707, 180);
             this.dgvbuilding.TabIndex = 13;
             this.dgvbuilding.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvbuilding_CellContentClick);
             // 
@@ -93,10 +93,10 @@
             // 
             // btnFind
             // 
-            this.btnFind.Location = new System.Drawing.Point(415, 29);
-            this.btnFind.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFind.Location = new System.Drawing.Point(311, 23);
+            this.btnFind.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(89, 42);
+            this.btnFind.Size = new System.Drawing.Size(67, 34);
             this.btnFind.TabIndex = 11;
             this.btnFind.Text = "查询";
             this.btnFind.UseVisualStyleBackColor = true;
@@ -105,19 +105,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(56, 45);
+            this.label1.Location = new System.Drawing.Point(42, 36);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 15);
+            this.label1.Size = new System.Drawing.Size(65, 12);
             this.label1.TabIndex = 9;
             this.label1.Text = "宿舍楼名称";
             // 
             // btnExit
             // 
             this.btnExit.Font = new System.Drawing.Font("宋体", 12F);
-            this.btnExit.Location = new System.Drawing.Point(623, 337);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnExit.Location = new System.Drawing.Point(658, 270);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(124, 50);
+            this.btnExit.Size = new System.Drawing.Size(93, 40);
             this.btnExit.TabIndex = 16;
             this.btnExit.Text = "退出";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -127,19 +128,19 @@
             // 
             this.txtDromName.Font = new System.Drawing.Font("宋体", 15F);
             this.txtDromName.FormattingEnabled = true;
-            this.txtDromName.Location = new System.Drawing.Point(144, 33);
-            this.txtDromName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDromName.Location = new System.Drawing.Point(108, 26);
+            this.txtDromName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDromName.Name = "txtDromName";
-            this.txtDromName.Size = new System.Drawing.Size(239, 33);
+            this.txtDromName.Size = new System.Drawing.Size(180, 28);
             this.txtDromName.TabIndex = 18;
             // 
             // btnUpdate
             // 
             this.btnUpdate.Font = new System.Drawing.Font("宋体", 12F);
-            this.btnUpdate.Location = new System.Drawing.Point(476, 337);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUpdate.Location = new System.Drawing.Point(531, 270);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(124, 50);
+            this.btnUpdate.Size = new System.Drawing.Size(93, 40);
             this.btnUpdate.TabIndex = 19;
             this.btnUpdate.Text = "更新";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -147,9 +148,10 @@
             // 
             // btnInsert
             // 
-            this.btnInsert.Location = new System.Drawing.Point(59, 337);
+            this.btnInsert.Location = new System.Drawing.Point(44, 270);
+            this.btnInsert.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(104, 50);
+            this.btnInsert.Size = new System.Drawing.Size(78, 40);
             this.btnInsert.TabIndex = 20;
             this.btnInsert.Text = "插入新楼";
             this.btnInsert.UseVisualStyleBackColor = true;
@@ -157,9 +159,9 @@
             // 
             // buildingManagerFrm2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(792, 415);
+            this.ClientSize = new System.Drawing.Size(762, 390);
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.txtDromName);
@@ -167,7 +169,7 @@
             this.Controls.Add(this.btnFind);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExit);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "buildingManagerFrm2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "buildingManagerFrmw";

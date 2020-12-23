@@ -79,6 +79,8 @@ namespace frmWin.dorm
             reader3.Read();
             int buildid = Convert.ToInt32(reader3[0]);
             reader3.Close();
+            
+
 
             SqlCommand sql = new SqlCommand("select dormId from dorm", conn);
             SqlDataReader reader = sql.ExecuteReader();
